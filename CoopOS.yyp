@@ -37,6 +37,7 @@
   },
   "name":"CoopOS",
   "resources":[
+    {"id":{"name":"obj_bug","path":"objects/obj_bug/obj_bug.yy",},},
     {"id":{"name":"obj_control","path":"objects/obj_control/obj_control.yy",},},
     {"id":{"name":"obj_helper","path":"objects/obj_helper/obj_helper.yy",},},
     {"id":{"name":"obj_mouse","path":"objects/obj_mouse/obj_mouse.yy",},},
@@ -44,8 +45,9 @@
     {"id":{"name":"obj_solid","path":"objects/obj_solid/obj_solid.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
     {"id":{"name":"scr_globals","path":"scripts/scr_globals/scr_globals.yy",},},
+    {"id":{"name":"spr_bug","path":"sprites/spr_bug/spr_bug.yy",},},
     {"id":{"name":"spr_helper","path":"sprites/spr_helper/spr_helper.yy",},},
-    {"id":{"name":"spr_pasta","path":"sprites/spr_pasta/spr_pasta.yy",},},
+    {"id":{"name":"spr_icone","path":"sprites/spr_icone/spr_icone.yy",},},
     {"id":{"name":"spr_pmouse","path":"sprites/spr_pmouse/spr_pmouse.yy",},},
     {"id":{"name":"spr_solid","path":"sprites/spr_solid/spr_solid.yy",},},
   ],

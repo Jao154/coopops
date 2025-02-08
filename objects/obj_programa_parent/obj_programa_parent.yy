@@ -35,8 +35,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_pasta",
-    "path":"sprites/spr_pasta/spr_pasta.yy",
+    "name":"spr_icone",
+    "path":"sprites/spr_icone/spr_icone.yy",
   },
   "spriteMaskId":null,
   "visible":true,
