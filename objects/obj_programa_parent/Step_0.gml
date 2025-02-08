@@ -4,12 +4,14 @@ var _ocupado = place_meeting(x,y,obj_programa_parent)
 
 //Seguindo o mouse se eu estou em cima dele
 if position_meeting(mouse_x, mouse_y, id) {
-	if mouse_check_button(mb_left) seg = 1; 
+	if mouse_check_button(mb_left)
+	{	seg = 1; 
+	}
 }
 
-if (seg = 1)		
+if (seg = 1)
 {
-//Se movendo na grid
+		//Se movendo na grid
 		var _x = (mouse_x div tam) * tam
 		var _y = (mouse_y div tam) * tam
 	
