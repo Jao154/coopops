@@ -20,7 +20,15 @@ state_machine = function()
 			
 			
 			hspeed = velocity;
-	        begin_move = false;		
+	        begin_move = false;
+			
+			with (obj_helper)
+			{
+				if place_meeting(x, y + 1, obj_navegador)
+				{
+					x += obj_navegador.velocity	
+				}
+			}
 		}
 		
 	}
