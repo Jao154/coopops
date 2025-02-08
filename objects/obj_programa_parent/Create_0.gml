@@ -1,6 +1,7 @@
 /// @description
 //Se estou sendo segurado
 seg = 0
+obj = []
 
 //Último X e Y em que eu estava
 last_x = x
