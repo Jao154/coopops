@@ -8,10 +8,13 @@ state_machine = function()
 		case "waiting":
 		{
 			hspeed = 0;
-			if mouse_check_button_pressed(mb_left)
-			{
+		if(position_meeting(mouse_x, mouse_y, id))
+		{
+				if mouse_check_button_pressed(mb_left)
+				{
 				
-				state = "moving"
+					state = "moving"
+				}
 			}
 		}
 		break
@@ -24,7 +27,7 @@ state_machine = function()
 			
 			with (obj_helper)
 			{
-				if place_meeting(x, y + 1, obj_navegador)
+				if place_meeting(x, y + 1, obj_navegador) && !place_meeting(x+sign(hspd),y,obj_solid)
 				{
 					x += obj_navegador.velocity	
 				}
