@@ -48,14 +48,14 @@ state_machine = function()
 			{
 				
 				//se o mouse estiver acima da area de trabalho
-				if (mouse_y < 340)
+			
 				{
 					
 					//se eu ainda tiver usos
 					if (paint_uses > 0)
 					{
 						//cria cor e gasta uso
-						instance_create_layer(mouse_x,mouse_y,"Instances",obj_color)
+						instance_create_layer(mouse_x,mouse_y,"icons",obj_color)
 						paint_uses--;
 					}
 				}
