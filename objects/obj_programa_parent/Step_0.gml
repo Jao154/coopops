@@ -7,13 +7,8 @@ if position_meeting(mouse_x, mouse_y, id) {
 	if mouse_check_button(mb_left)
 	{	
 		seg = 1;
-		//Apaga o icone se está com a lixeira ativada
-		if obj_mouse.eraser
-		{
-			instance_destroy(id)
-			obj_mouse.eraser = 0
-			obj_control.lixeira--
-		}
+		
+	
 	}
 }
 

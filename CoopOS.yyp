@@ -71,7 +71,6 @@
     {"id":{"name":"spr_menu_icons","path":"sprites/spr_menu_icons/spr_menu_icons.yy",},},
     {"id":{"name":"spr_mouse_paint","path":"sprites/spr_mouse_paint/spr_mouse_paint.yy",},},
     {"id":{"name":"spr_navegador","path":"sprites/spr_navegador/spr_navegador.yy",},},
-    {"id":{"name":"spr_paint","path":"sprites/spr_paint/spr_paint.yy",},},
     {"id":{"name":"spr_pmouse","path":"sprites/spr_pmouse/spr_pmouse.yy",},},
     {"id":{"name":"spr_pmouse_dmg","path":"sprites/spr_pmouse_dmg/spr_pmouse_dmg.yy",},},
     {"id":{"name":"spr_pmouse_drag","path":"sprites/spr_pmouse_drag/spr_pmouse_drag.yy",},},

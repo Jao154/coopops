@@ -2,6 +2,7 @@
 // Você pode escrever seu código neste editor
 //Seguindo o mouse se eu estou em cima dele
 
+state_machine();
 if position_meeting(mouse_x, mouse_y, obj_programa_parent)
 {
 	if mouse_check_button(mb_left) 
@@ -46,26 +47,16 @@ if position_meeting(mouse_x,mouse_y,obj_mensagem_erro)
 	}
 
 }
-else
-{
+
 	//se não estiver colidindo e o temporizador estiver baixo
 	if (life_timer <= 90) life_timer++;
-	cursor_sprite = spr_pmouse
-}
+	
+
 if (life <= 0)
 {
 	room_restart();
 }
 #endregion 
 
-#region
-if mouse_check_button_pressed(mb_left)
-{
-	if (paint == true and paint_uses > 0)
-	{
-		instance_create_layer(mouse_x,mouse_y,"Instances",obj_color)
-		paint_uses--;
-	}
-}
-
-#endregion
+if (paint_uses <= 0) paint = false;
+if (eraser_uses <= 0) eraser = false;

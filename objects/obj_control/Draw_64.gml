@@ -1,6 +1,6 @@
 /// @description DEBUG
 draw_text(20,20, "CLICKS :" + string(global.clicks))
-draw_text(20,40, "MOUSE SEGURANDO :" + string(obj_mouse.seg))
+//draw_text(20,40, "MOUSE SEGURANDO :" + string(obj_mouse.seg))
 
 //tava bugando
 //draw_text(20,60, "SEGURANDO :" + string(global.drag))
@@ -72,23 +72,78 @@ var _lixeira = point_in_rectangle(_mouse_x, _mouse_y, 119, _gui_h - 70, 180, _gu
 //Se eu clico na lixeira
 if _lixeira
 {
-	if lixeira > 0 {
-		if mouse_check_button_pressed(mb_left)
+	if mouse_check_button_pressed(mb_left)
 		{
-			obj_mouse.eraser = 1
-			_l_color = c_red
+			 if (obj_mouse.state != "eraser")
+			 {
+				obj_mouse.state = "eraser" 
+			 }
+			 else
+			 {
+				obj_mouse.state = "none" 
+			 }
 		}
-	}
+	
 }
 
 //Reseta a cor quando eu paro de usar a lixeira
-if obj_mouse.eraser = true or lixeira <= 0
+if (obj_mouse.state = "eraser")
 	{
 		_l_color = c_red
 	}
+else
+	{
+		_l_color = c_white	
+	}
+	
+	
 	
 //Desenha o sprite da lixeira
-draw_sprite_ext(_sprite, 1, 150, _gui_h - 45, 5, 5, 0, _l_color, 1)
+draw_sprite_ext(_sprite, 2, 150, _gui_h - 45, 5, 5, 0, _l_color, 1)
 draw_set_color(c_black)
-draw_text(175, _gui_h - 25, string(lixeira))
+draw_text(175, _gui_h - 25, string(obj_mouse.eraser_uses))
+draw_set_color(c_white)
+
+
+
+
+//Paint
+var _2_color = c_white //Cor do paint, para indicar que está sendo usada
+//Colisão com  paint
+var _paint = point_in_rectangle(_mouse_x, _mouse_y, 220, _gui_h - 70, 280, _gui_h)
+
+//Se eu clico no paint
+if _paint
+{
+	
+	
+		if mouse_check_button_pressed(mb_left)
+		{
+			 if (obj_mouse.state != "paint")
+			 {
+				obj_mouse.state = "paint" 
+			 }
+			 else
+			 {
+				obj_mouse.state = "none" 
+			 }
+		}
+	
+}
+
+//Reseta a cor quando eu paro de usar a lixeira
+if (obj_mouse.state = "paint")
+{		
+	_2_color = c_red
+}
+else
+{
+	_2_color = c_white
+}
+
+	
+//Desenha o sprite da lixeira
+draw_sprite_ext(_sprite, 1, 250, _gui_h - 45, 5, 5, 0, _2_color, 1)
+draw_set_color(c_black)
+draw_text(275, _gui_h - 25, string(obj_mouse.paint_uses))
 draw_set_color(c_white)
