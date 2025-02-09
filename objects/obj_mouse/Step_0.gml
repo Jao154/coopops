@@ -57,3 +57,15 @@ if (life <= 0)
 	room_restart();
 }
 #endregion 
+
+#region
+if mouse_check_button_pressed(mb_left)
+{
+	if (paint == true and paint_uses > 0)
+	{
+		instance_create_layer(mouse_x,mouse_y,"Instances",obj_color)
+		paint_uses--;
+	}
+}
+
+#endregion

@@ -6,7 +6,8 @@ cursor_sprite = spr_pmouse
 window_set_cursor(cr_none)
 
 eraser = 0 //Modo de apagar
-
+paint = true // Modo paint
+paint_uses = 3;
 //controlar o tempo do reinicio de fase
 lose = false;
 
