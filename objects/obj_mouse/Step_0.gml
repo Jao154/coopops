@@ -1,8 +1,11 @@
 /// @description Inserir descrição aqui
 // Você pode escrever seu código neste editor
-//Seguindo o mouse se eu estou em cima dele
 
+//se estiver não estiver segurando, posso segurar
+if (seg = 0) drag = false;
 state_machine();
+
+//Seguindo o mouse se eu estou em cima dele
 if position_meeting(mouse_x, mouse_y, obj_programa_parent)
 {
 	if mouse_check_button(mb_left) 

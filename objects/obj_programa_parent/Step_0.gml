@@ -6,7 +6,17 @@ var _ocupado = place_meeting(x,y,obj_programa_parent)
 if position_meeting(mouse_x, mouse_y, id) {
 	if mouse_check_button(mb_left)
 	{	
-		seg = 1;
+		if (obj_mouse.drag_uses > 0)
+		{
+			seg = 1;
+			
+			//se arrasta gasta um uso;
+			if (obj_mouse.drag == false)
+			{
+				obj_mouse.drag = true;
+				obj_mouse.drag_uses--;
+			}
+		}
 		// se estiver no estado eraser, pode ser destruido
 		if (obj_mouse.state == "eraser" and obj_mouse.eraser_uses > 0)
 		{

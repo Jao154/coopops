@@ -1,11 +1,16 @@
 /// @description Controla as ações do mouse
 ///Se o mouse está segurando alguma coisa
-seg = 0
+seg = 0;
+drag = false; //controle para gastar apenas quando segura
+
+
+
 //Sprite do mouse
 cursor_sprite = spr_pmouse
 window_set_cursor(cr_none)
 
 //quantidade de usos
+drag_uses = 10;
 eraser_uses = 3
 paint_uses = 3;
 
