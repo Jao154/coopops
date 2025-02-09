@@ -1,4 +1,9 @@
-/// @description Controles
+/// @description Controle
+mask_index = spr_helper_idle
+
+state_machine();
+show_debug_message(state);
+/*
 var _left, _right, _up
 		_left = keyboard_check(vk_left)			or keyboard_check(ord("A"))
 		_right = keyboard_check(vk_right)		or keyboard_check(ord("D"))
@@ -29,3 +34,4 @@ if !(_ground)
 {
 	vspd += grav
 }
+*/
