@@ -1,6 +1,9 @@
 /// @description Controla as ações do mouse
 ///Se o mouse está segurando alguma coisa
 seg = 0
+//Sprite do mouse
+cursor_sprite = spr_pmouse
+window_set_cursor(cr_none)
 
 eraser = 0 //Modo de apagar
 

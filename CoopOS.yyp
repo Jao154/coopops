@@ -63,6 +63,8 @@
     {"id":{"name":"spr_menu_icons","path":"sprites/spr_menu_icons/spr_menu_icons.yy",},},
     {"id":{"name":"spr_menu","path":"sprites/spr_menu/spr_menu.yy",},},
     {"id":{"name":"spr_navegador","path":"sprites/spr_navegador/spr_navegador.yy",},},
+    {"id":{"name":"spr_pmouse_dmg","path":"sprites/spr_pmouse_dmg/spr_pmouse_dmg.yy",},},
+    {"id":{"name":"spr_pmouse_drag","path":"sprites/spr_pmouse_drag/spr_pmouse_drag.yy",},},
     {"id":{"name":"spr_pmouse","path":"sprites/spr_pmouse/spr_pmouse.yy",},},
     {"id":{"name":"spr_solid","path":"sprites/spr_solid/spr_solid.yy",},},
     {"id":{"name":"spr_stop","path":"sprites/spr_stop/spr_stop.yy",},},
