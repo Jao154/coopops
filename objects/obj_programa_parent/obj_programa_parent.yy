@@ -10,8 +10,8 @@
   "name":"obj_programa_parent",
   "overriddenProperties":[],
   "parent":{
-    "name":"Programas",
-    "path":"folders/Objetos/Programas.yy",
+    "name":"icones",
+    "path":"folders/Objetos/icones.yy",
   },
   "parentObjectId":{
     "name":"obj_solid",

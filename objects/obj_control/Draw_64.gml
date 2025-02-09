@@ -72,6 +72,7 @@ var _lixeira = point_in_rectangle(_mouse_x, _mouse_y, 119, _gui_h - 70, 180, _gu
 //Se eu clico na lixeira
 if _lixeira
 {
+	//alterna entre os estados
 	if mouse_check_button_pressed(mb_left)
 		{
 			 if (obj_mouse.state != "eraser")
@@ -116,7 +117,7 @@ var _paint = point_in_rectangle(_mouse_x, _mouse_y, 220, _gui_h - 70, 280, _gui_
 if _paint
 {
 	
-	
+	//alterna entre estados
 		if mouse_check_button_pressed(mb_left)
 		{
 			 if (obj_mouse.state != "paint")

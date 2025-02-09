@@ -5,16 +5,19 @@ seg = 0
 cursor_sprite = spr_pmouse
 window_set_cursor(cr_none)
 
-eraser = false;
-paint = false;
+//quantidade de usos
 eraser_uses = 3
 paint_uses = 3;
+
 //controlar o tempo do reinicio de fase
 lose = false;
 
 //temporizador de dano
 life_timer = 90;
 life = 3;
+
+#region state machine
+
 state = "none"
 state_machine = function()
 {
@@ -27,30 +30,26 @@ state_machine = function()
 		break
 		case "eraser":
 		{
+			cursor_sprite = spr_pmouse;
 			
-			if (mouse_check_button_pressed(mb_left))
-			{
-				if (mouse_y < 340)
-					{
-						if (obj_mouse.eraser_uses > 0)
-						{
-							state = "none"
-							instance_destroy(other)
-							eraser_uses--;
-						}
-					}			
-			}
 		}
 		break
 		case "paint":
 		{
 			cursor_sprite = spr_mouse_paint
+			
+			//se estiver no estado paint e clicar
 			if mouse_check_button_pressed(mb_left)
 			{
+				
+				//se o mouse estiver acima da area de trabalho
 				if (mouse_y < 340)
 				{
+					
+					//se eu ainda tiver usos
 					if (paint_uses > 0)
 					{
+						//cria cor e gasta uso
 						instance_create_layer(mouse_x,mouse_y,"Instances",obj_color)
 						paint_uses--;
 					}
@@ -61,7 +60,5 @@ state_machine = function()
 		
 	}
 }
-
-#region
 
 #endregion

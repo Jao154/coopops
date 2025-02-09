@@ -57,6 +57,3 @@ if (life <= 0)
 	room_restart();
 }
 #endregion 
-
-if (paint_uses <= 0) paint = false;
-if (eraser_uses <= 0) eraser = false;
