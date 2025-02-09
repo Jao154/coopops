@@ -9,3 +9,7 @@ eraser = 0 //Modo de apagar
 
 //controlar o tempo do reinicio de fase
 lose = false;
+
+//temporizador de dano
+life_timer = 90;
+life = 3;
