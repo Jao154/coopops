@@ -4,14 +4,18 @@ seg = 0;
 drag = false; //controle para gastar apenas quando segura
 item = noone;
 
+enemy_id = noone;
+
 //Sprite do mouse
-cursor_sprite = spr_pmouse
+cursor_sprite = spr_mouse_antivirus
 window_set_cursor(cr_none)
 
 //quantidade de usos
 drag_uses = 10;
-eraser_uses = 3;
-paint_uses = 3;
+paint_uses = 1;
+eraser_uses = 2;
+folder_uses = 2;
+
 
 //controlar o tempo do reinicio de fase
 lose = false;
@@ -31,13 +35,18 @@ state_machine = function()
 		{
 			cursor_sprite = spr_pmouse
 			
+			enemy_id = noone;
+			
 			if (life_timer <= 90)
 			{
 				life_timer++;
 			}
 			
 			//se estou colidindo com o icone
-			if position_meeting(mouse_x, mouse_y, obj_icon1) or position_meeting(mouse_x,mouse_y,obj_icon2)
+			if position_meeting(mouse_x, mouse_y, obj_icon1)
+			or position_meeting(mouse_x,mouse_y,obj_icon2)
+			or (obj_helper.state == "folder" 
+			and position_meeting(mouse_x,mouse_y,obj_helper))
 				{
 					//alternado para arraste
 					if (mouse_check_button_pressed(mb_left))
@@ -71,7 +80,7 @@ state_machine = function()
 				
 				//alterno para o estado nada
 				state = "none";
-				seg_virus = 0
+				seg = 0
 				drag = false
 			}
 		}
@@ -139,6 +148,28 @@ state_machine = function()
 						instance_create_layer(_x,_y,"icons",obj_color)
 						paint_uses--;
 					}
+				}
+			}
+		}
+		break
+		case "antivirus":
+		{
+			cursor_sprite = spr_mouse_antivirus
+			
+			//colisão
+			if position_meeting(mouse_x,mouse_y,obj_virus_stalker)
+			{
+				
+				if mouse_check_button_pressed(mb_left)
+				{
+					enemy_id.life--; //reduz a vida
+					enemy_id.velocity = 0; // faz ele parar
+					enemy_id.alarm[0] = 10; // tempo para ele voltar a andar
+					
+					//efeito mola
+					enemy_id.image_xscale = lerp(image_xscale,2,0.5)
+					enemy_id.image_yscale = lerp(image_yscale,0.2,0.5)
+					
 				}
 			}
 		}

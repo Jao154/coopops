@@ -14,4 +14,5 @@ if instance_exists(view_target)
 		
 		//Aplicando na camera
 		camera_set_view_pos(view_camera[0], _x1, _y1)
+		
 }

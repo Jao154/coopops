@@ -12,8 +12,12 @@ global.check_icons = false;
 global.helper_life = 3 //Quantas vidas o mouse tem
 
 //Icones coletados
-global.lixeira = true;
 global.paint = true;
+global.lixeira = true;
+global.folder = true;
+global.antivirus = true;
+global.cleaner = true;
+
 
 //Popup
 global.popup = 0
@@ -21,3 +25,6 @@ global.popup = 0
 //font
 var _alphabet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789/!?-#()[]:;ãâáàçõôóòêéèíìúù.,_+*&%\'"
 global.font1 = font_add_sprite_ext(spr_font, _alphabet, true, -1)
+
+//buff
+global.cleaner_buff = false;

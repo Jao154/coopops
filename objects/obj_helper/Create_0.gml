@@ -3,8 +3,35 @@ vspd = 0		//Velocidade Vertical
 dir    =  0		//Direção que estou olhando
 grav = .2			//Gravidade
 
-max_hspd = 1.5 //Velocidade Máxima
-max_vspd = 3.8 //Pulo máximo
+
+/// @description
+//Se estou sendo segurado
+seg = 0
+alpha = 1 //Transparência
+
+//Último X e Y em que eu estava
+last_x = x
+last_y = y
+
+//Tamanho da sprite
+tam = sprite_width
+
+//cleaner
+cleaner_wait = 600; //recarga
+cleaner_timer = 0; //temporizador
+cleaner_begin = false; //inicio das particulas
+hspd_buff = 2;
+vspd_buff = 4.5;
+
+//movimento
+hspd_normal = 1.5;
+vspd_normal = 3.8;
+max_hspd = hspd_normal //Velocidade Máxima
+max_vspd = vspd_normal //Pulo máximo
+/*
+_cam = camera_create()
+camera_set_view_target(_cam,obj_helper)
+*/
 
 state = "idle"
 state_machine = function()
@@ -139,5 +166,108 @@ state_machine = function()
 			}
 		}
 		break
+		case "folder":
+		{
+			sprite_index = spr_helper_folder;
+			hspd = 0;
+			
+			var _ocupado = place_meeting(x,y,obj_solid) or place_meeting(x,y,obj_helper)
+			
+			
+		
+			//Se o mouse eata no estado de arraste
+			if (obj_mouse.state = "drag")
+			{
+				//Se estou colidindo com o mouse
+				if position_meeting(mouse_x, mouse_y, id) && !_ocupado
+				{
+		
+					//se apertei o botão esquerdo
+					if mouse_check_button(mb_left)
+					{
+			
+						//se não tem nenhum item
+						if obj_mouse.item = noone
+						{
+				
+							//estou segurando aquel item
+							obj_mouse.item = id	
+						}
+						//controla o gasto de usos
+						if (obj_mouse.drag_uses > 0)
+						{
+							seg = 1;
+			
+							//se arrasta gasta um uso;
+							if (obj_mouse.drag == false)
+							{
+								obj_mouse.drag = true;
+								obj_mouse.drag_uses--;
+							}
+						}
+	
+					}
+				}
+	
+				//se estou segurando ele
+				if (seg = 1) && obj_mouse.item != noone
+				{
+		
+						//Se movendo na grid
+						var _x = (mouse_x div tam) * tam
+						var _y = (mouse_y div tam) * tam
+	
+						obj_mouse.item.x = _x
+						obj_mouse.item.y = _y;
+		
+				}
+				// se soltei e não esta ocupado
+				if mouse_check_button_released(mb_left)
+					{
+						seg = 0
+						obj_mouse.item = noone;
+						if (_ocupado)
+						{
+								x = last_x
+								y = last_y
+			
+						} 
+						else 
+						{
+							last_x = x
+							last_y = y
+						}
+				}
+			}
+			else
+			{
+				if (!_ground)
+			{
+				//gravidade 
+				
+				vspd += grav
+			}
+			}
+
+			//vermelho se esta ocupado
+			if (_ocupado)
+			{
+				image_blend = c_red;
+			} 
+			else 
+			{
+				image_blend = c_white;
+			}
+
+
+			
+			
+			
+			
+			
+		}
+		break
 	}
 }
+
+

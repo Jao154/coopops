@@ -73,6 +73,50 @@ if (menu)
 #endregion
 
 //Icones
+
+//Se eu já coletei o paint
+if (global.paint)
+{
+		//Paint
+		var _2_color = c_white //Cor do paint, para indicar que está sendo usada
+		//Colisão com  paint
+		var _paint = point_in_rectangle(_mouse_x, _mouse_y, 120, _gui_h - 70, 180, _gui_h)
+
+		//Se eu clico no paint
+		if _paint
+		{
+	
+			//alterna entre estados
+				if mouse_check_button_pressed(mb_left)
+				{
+					 if (obj_mouse.state != "paint")
+					 {
+						obj_mouse.state = "paint" 
+					 }
+					 else
+					 {
+						obj_mouse.state = "none" 
+					 }
+				}
+	
+		}
+
+		//Reseta a cor quando eu paro de usar o paint
+		if (obj_mouse.state = "paint")
+		{		
+			_2_color = c_red
+		}
+		else
+		{
+			_2_color = c_white
+		}
+
+	
+		//Desenha o sprite do paint
+		draw_sprite_ext(_sprite, 1, 150, _gui_h - 45, 5, 5, 0, _2_color, 1)
+		draw_text_transformed(175, _gui_h - 25, string(obj_mouse.paint_uses), _txt_scale, _txt_scale, 0)
+}
+
 //Lixeira
 
 //Se eu tiver coletado a lixeira
@@ -80,7 +124,7 @@ if (global.lixeira)
 {
 		var _l_color = c_white //Cor da lixeira, para indicar que está sendo usada
 		//Colisão com  lixeira
-		var _lixeira = point_in_rectangle(_mouse_x, _mouse_y, 119, _gui_h - 70, 180, _gui_h)
+		var _lixeira = point_in_rectangle(_mouse_x, _mouse_y, 220, _gui_h - 70, 280, _gui_h)
 
 		//Se eu clico na lixeira
 		if _lixeira
@@ -111,39 +155,53 @@ if (global.lixeira)
 			}
 
 		//Desenha o sprite da lixeira
-		draw_sprite_ext(_sprite, 2, 150, _gui_h - 45, 5, 5, 0, _l_color, 1)
-		draw_text_transformed(175, _gui_h - 25, string(obj_mouse.eraser_uses), _txt_scale, _txt_scale, 0)
+		draw_sprite_ext(_sprite, 2, 250, _gui_h - 45, 5, 5, 0, _l_color, 1)
+		draw_text_transformed(275, _gui_h - 25, string(obj_mouse.eraser_uses), _txt_scale, _txt_scale, 0)
 }
 
-//Se eu já coletei o paint
-if (global.paint)
-{
-		//Paint
-		var _2_color = c_white //Cor do paint, para indicar que está sendo usada
-		//Colisão com  paint
-		var _paint = point_in_rectangle(_mouse_x, _mouse_y, 220, _gui_h - 70, 280, _gui_h)
 
-		//Se eu clico no paint
-		if _paint
+//Se eu já coletei a pasta
+if (global.folder)
+{
+		//Pasta
+		var _2_color = c_white //Cor da pasta, para indicar que está sendo usada
+		//Colisão com  pasta
+		var _folder = point_in_rectangle(_mouse_x, _mouse_y, 320, _gui_h - 70, 380, _gui_h)
+
+		//Se eu clico na pasta
+		if (_folder)
 		{
 	
-			//alterna entre estados
+			//alterna entre estados, controla gasto de usos
 				if mouse_check_button_pressed(mb_left)
 				{
-					 if (obj_mouse.state != "paint")
-					 {
-						obj_mouse.state = "paint" 
-					 }
-					 else
-					 {
-						obj_mouse.state = "none" 
-					 }
+					
+					if (obj_mouse.folder_uses > 0)
+					{
+						if (obj_helper.state != "folder")
+						{
+							obj_mouse.folder_uses--;
+							obj_helper.state = "folder" 
+						}
+						else
+						{
+							obj_helper.state = "idle" 
+						}
+					}
+					else
+					{
+						if (obj_helper.state = "folder")
+						{
+							obj_helper.state = "idle";						
+						}
+					}
+					
 				}
 	
 		}
 
-		//Reseta a cor quando eu paro de usar a lixeira
-		if (obj_mouse.state = "paint")
+		//Reseta a cor quando eu paro de usar a pasta
+		if (obj_helper.state = "folder")
 		{		
 			_2_color = c_red
 		}
@@ -153,9 +211,97 @@ if (global.paint)
 		}
 
 	
-		//Desenha o sprite da lixeira
-		draw_sprite_ext(_sprite, 1, 250, _gui_h - 45, 5, 5, 0, _2_color, 1)
-		draw_text_transformed(275, _gui_h - 25, string(obj_mouse.paint_uses), _txt_scale, _txt_scale, 0)
+		//Desenha o sprite da pasta
+		draw_sprite_ext(_sprite, 3, 350, _gui_h - 45, 5, 5, 0, _2_color, 1)
+		draw_text_transformed(375, _gui_h - 25, string(obj_mouse.folder_uses), _txt_scale, _txt_scale, 0)
 }
+
+
+//Se eu já coletei o antivirus
+if (global.antivirus)
+{
+		//antivirus
+		var _2_color = c_white //Cor do antivirus, para indicar que está sendo usada
+		//Colisão com o antivirus
+		var _antivirus = point_in_rectangle(_mouse_x, _mouse_y, 420, _gui_h - 70, 480, _gui_h)
+
+		//Se eu clico no antivirus
+		if _antivirus
+		{
+	
+			//alterna entre estados
+				if mouse_check_button_pressed(mb_left)
+				{
+					 if (obj_mouse.state != "antivirus")
+					 {
+						obj_mouse.state = "antivirus" 
+					 }
+					 else
+					 {
+						obj_mouse.state = "none" 
+					 }
+				}
+	
+		}
+
+		//Reseta a cor quando eu paro de usar o antivirus
+		if (obj_mouse.state = "antivirus")
+		{		
+			_2_color = c_red
+		}
+		else
+		{
+			_2_color = c_white
+		}
+
+	
+		//Desenha o sprite do antivirus
+		draw_sprite_ext(_sprite, 4, 450, _gui_h - 45, 5, 5, 0, _2_color, 1)
+		//draw_text_transformed(475, _gui_h - 25, string(obj_mouse.antivirus_uses), _txt_scale, _txt_scale, 0)
+}
+
+
+
+//Se eu já coletei o cleaner
+if (global.cleaner)
+{
+		//cleaner
+		var _2_color = c_white //Cor da pasta, para indicar que está sendo usada
+		//Colisão com o cleaner
+		var _cleaner = point_in_rectangle(_mouse_x, _mouse_y, 520, _gui_h - 70, 580, _gui_h)
+
+		//Se eu clico no cleaner
+		if _cleaner
+		{
+	
+			//se clicar e o temporizador estiver zerado
+				if mouse_check_button_pressed(mb_left)
+				{
+					if (obj_helper.cleaner_timer <= 0)
+					{
+						global.cleaner_buff = true;// ativando o buff
+						alarm[0] = 180; //duração do buff
+					}
+				}
+	
+		}
+
+		//Reseta a cor quando pode usar o cleaner
+		if (obj_helper.cleaner_timer >= 0)
+		{		
+			_2_color = c_red
+		}
+		else
+		{
+			_2_color = c_white
+		}
+
+	
+		//Desenha o sprite do antivirus
+		draw_sprite_ext(_sprite, 5, 550, _gui_h - 45, 5, 5, 0, _2_color, 1)
+		//draw_text_transformed(575, _gui_h - 25, string(obj_mouse.cleaner_uses), _txt_scale, _txt_scale, 0)
+}
+
+
 
 draw_set_font(-1)
