@@ -16,8 +16,9 @@ if position_meeting(mouse_x, mouse_y, id) {
 			//se arrasta gasta um uso;
 			if (obj_mouse.drag == false)
 			{
-				obj_mouse.drag = true;
 				obj_mouse.drag_uses--;
+				obj_mouse.drag = true;
+				
 			}
 		}
 		// se estiver no estado eraser, pode ser destruido

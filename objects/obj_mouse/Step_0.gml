@@ -2,11 +2,11 @@
 // Você pode escrever seu código neste editor
 
 //se estiver não estiver segurando, posso segurar
-if (seg = 0) drag = false;
+
 state_machine();
 
 //Seguindo o mouse se eu estou em cima dele
-if position_meeting(mouse_x, mouse_y, obj_programa_parent)
+if position_meeting(mouse_x, mouse_y, obj_icon1)
 {
 	if mouse_check_button(mb_left) 
 	{
@@ -15,6 +15,21 @@ if position_meeting(mouse_x, mouse_y, obj_programa_parent)
 	}
 	else 
 	{
+		seg = 0
+		drag = false;
+		cursor_sprite = spr_pmouse
+	}
+}
+if position_meeting(mouse_x, mouse_y, obj_icon2)
+{
+	if mouse_check_button(mb_left) 
+	{
+		seg = 1
+		cursor_sprite = spr_pmouse_drag
+	}
+	else 
+	{
+		drag = false;
 		seg = 0
 		cursor_sprite = spr_pmouse
 	}

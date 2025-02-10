@@ -1,11 +1,16 @@
-/// @description
+if (global.check_point)
+{
+	x = global.check_x
+	y = global.check_y
+}
+
 hspd = 0		//Velocidade horizontal
 vspd = 0		//Velocidade Vertical
 dir    =  0		//Direção que estou olhando
 grav = .2			//Gravidade
 
 max_hspd = 1.5 //Velocidade Máxima
-max_vspd = 3.5 //Pulo máximo
+max_vspd = 3.8 //Pulo máximo
 
 state = "idle"
 state_machine = function()

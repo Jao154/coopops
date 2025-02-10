@@ -55,7 +55,11 @@ if (menu)
 		if mouse_check_button_pressed(mb_left) game_end()	
 	}
 	if _restart {
-		if mouse_check_button_pressed(mb_left) room_restart()	
+		if mouse_check_button_pressed(mb_left) 
+		{
+			room_restart()
+			
+		}
 	}
 }
 

@@ -2,6 +2,11 @@
 global.clicks = 10 //Cliques eu eu ainda tenho
 global.mouse_life = 5 //Quantas vidas o mouse tem
 
+global.check_point = false;
+global.check_x = 0;
+global.check_y = 0;
+global.check_icons = false;
+
 //Jogador
 global.helper_life = 3 //Quantas vidas o mouse tem
 
