@@ -1,7 +1,7 @@
-if (file_exists("checkpoint.ini"))
+if (file_exists("checkpoint.ini")) //se tocar pela primeira vez
 {
 	ini_open("checkpoint.ini");
-	
+	//salva as posições do helper, icone 1 e 2
 	obj_helper.x = ini_read_real("helper","x",x);
 	obj_helper.y = ini_read_real("helper","y",y);
 	obj_icon1.x = ini_read_real("icon1","x",x);
