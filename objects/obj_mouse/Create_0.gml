@@ -36,6 +36,7 @@ state_machine = function()
 			cursor_sprite = spr_pmouse
 			
 			enemy_id = noone;
+			eraser_id = noone;
 			
 			if (life_timer <= 90)
 			{
@@ -104,6 +105,8 @@ state_machine = function()
 		case "eraser":
 		{
 			cursor_sprite = spr_mouse_lixeira;
+			
+			
 			if (position_meeting(mouse_x,mouse_y,obj_icon1))
 			{
 				if (mouse_check_button_pressed(mb_left)  && (eraser_uses > 0))
@@ -118,6 +121,15 @@ state_machine = function()
 				if (mouse_check_button_pressed(mb_left)  && (eraser_uses > 0))
 				{
 					instance_destroy(obj_icon2)
+					state = "none";
+					eraser_uses--;
+				}
+			}
+			if (position_meeting(mouse_x,mouse_y,obj_move))
+			{
+				if (mouse_check_button_pressed(mb_left)  && (eraser_uses > 0))
+				{
+					instance_destroy(eraser_id)
 					state = "none";
 					eraser_uses--;
 				}
