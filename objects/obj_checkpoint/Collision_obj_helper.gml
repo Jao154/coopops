@@ -4,6 +4,7 @@ if (image_index == 5) exit
 //animando
 image_speed = 6;
 
+obj_mouse.drag_uses = 10;
 
 //salvando posições
  ini_open("checkpoint.ini")

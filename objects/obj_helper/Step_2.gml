@@ -41,15 +41,18 @@ if obj_icon2.seg = 0 {
 			hspd = 0
 		}
 }
-if obj_move.seg = 0 {
-		if place_meeting(x + hspd, y, obj_move)
-		{
-				while(!place_meeting(x + sign(hspd), y, obj_move))
-				{
-					x = x + sign(hspd)
-				}
-			hspd = 0
-		}
+if instance_exists(obj_move)
+{
+	if obj_move.seg = 0 {
+			if place_meeting(x + hspd, y, obj_move)
+			{
+					while(!place_meeting(x + sign(hspd), y, obj_move))
+					{
+						x = x + sign(hspd)
+					}
+				hspd = 0
+			}
+	}
 }
 //Movendo o X
 x += hspd
@@ -85,17 +88,19 @@ if obj_icon2.seg = 0 {
 			vspd = 0
 		}
 }
-if obj_move.seg = 0 {
-		if place_meeting(x, y + vspd, obj_move)
-		{
-				while(!place_meeting(x, y + sign(vspd), obj_move))
-				{
-					y = y + sign(vspd)
-				}
-			vspd = 0
-		}
+if instance_exists(obj_move)
+{
+	if obj_move.seg = 0 {
+			if place_meeting(x, y + vspd, obj_move)
+			{
+					while(!place_meeting(x, y + sign(vspd), obj_move))
+					{
+						y = y + sign(vspd)
+					}
+				vspd = 0
+			}
+	}
 }
-
 
 //Movendo o Y
 y += vspd

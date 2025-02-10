@@ -37,15 +37,26 @@ state = "idle"
 state_machine = function()
 {
 	// checando se esta no chão
-	var _icon_solid = 0
-	if instance_exists(obj_programa_parent)
+	var _icon_solid1 = 0
+	if instance_exists(obj_icon1)
 	{
-		if obj_programa_parent.seg = 0
+		if obj_icon1.seg = 0
 		{
-			var _icon_solid = place_meeting(x, y + 1, obj_programa_parent)	
+			_icon_solid1 = place_meeting(x, y + 1, obj_icon1)	
 		}
 	}
-	var _ground = place_meeting(x, y + 1, obj_solid) or _icon_solid
+		var _icon_solid2 = 0
+	if instance_exists(obj_icon2)
+	{
+		if obj_icon2.seg = 0
+		{
+			_icon_solid2 = place_meeting(x, y + 1, obj_icon2)	
+		}
+	}
+	
+	
+	
+	var _ground = place_meeting(x, y + 1, obj_solid) or _icon_solid1 or _icon_solid2
 	
 	// armazenando teclas
 	var _left, _right, _up
@@ -56,6 +67,7 @@ state_machine = function()
 	var _press = _right - _left != 0 //Se eu estou apertando algum botão
 	var _dir = (_right - _left) //Qual botão eu estou apertando
 	var _len = point_direction(0, 0, _dir, 0) //Direção que devo ir
+
 	
 				//andando horizontalmente
 			hspd = lengthdir_x(max_hspd * _press, _len)
@@ -86,7 +98,7 @@ state_machine = function()
 			//pulando
 			if (_up and _ground)
 			{
-				
+				audio_play_sound(sfx_jump,99,0,,,random_range(0.8,1.2))
 				vspd -= max_vspd
 			}
 			
@@ -98,8 +110,13 @@ state_machine = function()
 			if (abs(hspd) > 0 or abs(vspd) > 0 or _left or _right or _up )
 			{
 				//eu estou me movendo
+				
 				state = "moving"
 			}
+		
+			
+			
+		
 			
 		}
 		break
@@ -121,6 +138,7 @@ state_machine = function()
 			//pulando
 			if (_up and _ground)
 			{
+				audio_play_sound(sfx_jump,99,0,,,random_range(0.8,1.2))
 				vspd -= max_vspd
 			}
 			

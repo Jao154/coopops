@@ -3,9 +3,12 @@
   "%Name":"tl_messages",
   "autoTileSets":[],
   "macroPageTiles":{
-    "SerialiseHeight":0,
-    "SerialiseWidth":0,
-    "TileSerialiseData":[],
+    "SerialiseHeight":15,
+    "SerialiseWidth":7,
+    "TileCompressedData":[
+      4,4,5,5,6,-3,0,4,14,15,15,16,-3,0,4,14,15,15,16,-3,0,4,24,25,25,26,-79,0,1,15,
+    ],
+    "TileDataFormat":1,
   },
   "name":"tl_messages",
   "out_columns":5,

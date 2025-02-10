@@ -37,9 +37,17 @@ if (_start)
 {
 	if mouse_check_button_pressed(mb_left)
 	{
-		if menu = false {
-		menu = true
-		} else menu = false
+		
+		if menu = false 
+		{
+			audio_play_sound(sfx_menu_in,100,0)
+			menu = true
+		} 
+		else 
+		{
+			audio_play_sound(sfx_menu_out,100,0)
+			menu = false
+		}
 	}
 }
 
@@ -56,13 +64,20 @@ if (menu)
 	//Área que posso clicar nos botões
 
 	
-	if _exit {
-		if mouse_check_button_pressed(mb_left) game_end()	
-	}
-	if _restart {
+	if _exit 
+	{
 		if mouse_check_button_pressed(mb_left) 
 		{
-			room_restart()
+			audio_play_sound(sfx_menu_select,100,0)
+			game_end()
+		}
+	}
+	if _restart 
+	{
+		if mouse_check_button_pressed(mb_left) 
+		{
+			audio_play_sound(sfx_menu_select,100,0)
+			alarm[1] = 15;
 			
 		}
 	}

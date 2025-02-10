@@ -12,11 +12,11 @@ global.check_icons = false;
 global.helper_life = 3 //Quantas vidas o mouse tem
 
 //Icones coletados
-global.paint = true;
-global.lixeira = true;
-global.folder = true;
-global.antivirus = true;
-global.cleaner = true;
+global.paint = false;
+global.lixeira = false;
+global.folder = false;
+global.antivirus = false;
+global.cleaner = false;
 
 
 //Popup
