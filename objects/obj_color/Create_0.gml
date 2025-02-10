@@ -1,2 +1,2 @@
 randomize();
-image_index = choose(0,1,2,3,4)
+image_blend = choose(c_red, c_orange, c_aqua, c_yellow, c_lime, c_fuchsia, c_silver)

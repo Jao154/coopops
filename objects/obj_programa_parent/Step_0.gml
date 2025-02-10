@@ -1,6 +1,6 @@
 /// @description
 //Checando se já tem um objeto embaixo desse
-var _ocupado = place_meeting(x,y,obj_solid)
+var _ocupado = place_meeting(x,y,obj_solid) or place_meeting(x,y,obj_helper)
 
 //Seguindo o mouse se eu estou em cima dele
 if position_meeting(mouse_x, mouse_y, id) && !_ocupado{
@@ -35,6 +35,7 @@ if position_meeting(mouse_x, mouse_y, id) && !_ocupado{
 
 if (seg = 1) && obj_mouse.item != noone
 {
+		cursor_sprite = spr_pmouse_drag
 		//Se movendo na grid
 		var _x = (mouse_x div tam) * tam
 		var _y = (mouse_y div tam) * tam
