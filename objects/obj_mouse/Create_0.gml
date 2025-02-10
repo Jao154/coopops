@@ -10,7 +10,7 @@ window_set_cursor(cr_none)
 
 //quantidade de usos
 drag_uses = 10;
-eraser_uses = 3
+eraser_uses = 3;
 paint_uses = 3;
 
 //controlar o tempo do reinicio de fase
@@ -29,12 +29,58 @@ state_machine = function()
 	{
 		case "none":
 		{
-			cursor_sprite = spr_pmouse;
+			cursor_sprite = spr_pmouse
+			
+			//se estou colidindo com o icone
+			if position_meeting(mouse_x, mouse_y, obj_icon1) or position_meeting(mouse_x,mouse_y,obj_icon2)
+				{
+					//alternado para arraste
+					if (mouse_check_button(mb_left))
+					{
+						state = "drag"
+						seg = 1
+						item = noone;
+					}
+				}	
+					
+		}
+		break
+		case "drag":
+		{
+			cursor_sprite = spr_pmouse_drag;
+			
+			//se soltei o botão do mouse
+			if (mouse_check_button_released(mb_left))
+			{
+				
+				//alterno para o estado nada
+				state = "none";
+				seg = 0
+				drag = false;
+			}
 		}
 		break
 		case "eraser":
 		{
 			cursor_sprite = spr_mouse_lixeira;
+			if (position_meeting(mouse_x,mouse_y,obj_icon1))
+			{
+				if (mouse_check_button_pressed(mb_left)  && (eraser_uses > 0))
+				{
+					instance_destroy(obj_icon1)
+					state = "none";
+					eraser_uses--;
+				}
+			}
+			if (position_meeting(mouse_x,mouse_y,obj_icon2))
+			{
+				if (mouse_check_button_pressed(mb_left)  && (eraser_uses > 0))
+				{
+					instance_destroy(obj_icon2)
+					state = "none";
+					eraser_uses--;
+				}
+			}
 			
 		}
 		break

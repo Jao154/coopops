@@ -1,9 +1,3 @@
-if (global.check_point)
-{
-	x = global.check_x
-	y = global.check_y
-}
-
 hspd = 0		//Velocidade horizontal
 vspd = 0		//Velocidade Vertical
 dir    =  0		//Direção que estou olhando
