@@ -37,9 +37,12 @@ if position_meeting(mouse_x,mouse_y,obj_mensagem_erro)
 
 }
 
-//se não estiver colidindo e o temporizador estiver baixo
-if (life_timer <= 90) life_timer++;
-	
+//se o timer
+if (life_timer <= 0)
+{
+	life--;
+	life_timer = 90;
+}
 
 if (life <= 0)
 {

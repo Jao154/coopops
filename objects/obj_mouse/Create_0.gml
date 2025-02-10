@@ -31,23 +31,55 @@ state_machine = function()
 		{
 			cursor_sprite = spr_pmouse
 			
+			if (life_timer <= 90)
+			{
+				life_timer++;
+			}
+			
 			//se estou colidindo com o icone
 			if position_meeting(mouse_x, mouse_y, obj_icon1) or position_meeting(mouse_x,mouse_y,obj_icon2)
 				{
 					//alternado para arraste
-					if (mouse_check_button(mb_left))
+					if (mouse_check_button_pressed(mb_left))
 					{
 						state = "drag"
 						seg = 1
 						item = noone;
 					}
 				}	
+			if (position_meeting(mouse_x,mouse_y,obj_virus_stalker))
+			{
+				{
+					if (mouse_check_button_pressed(mb_left))
+					{
+						state = "drag_virus";
+						seg_virus = 1;
+						
+					}
+				}
+			}
 					
 		}
 		break
 		case "drag":
 		{
 			cursor_sprite = spr_pmouse_drag;
+			
+			//se soltei o botão do mouse
+			if (mouse_check_button_released(mb_left))
+			{
+				
+				//alterno para o estado nada
+				state = "none";
+				seg_virus = 0
+				drag = false
+			}
+		}
+		break
+		case "drag_virus":
+		{
+			cursor_sprite = spr_pmouse_drag_dmg;
+			life_timer--;
 			
 			//se soltei o botão do mouse
 			if (mouse_check_button_released(mb_left))
