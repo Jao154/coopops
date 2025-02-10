@@ -21,17 +21,36 @@ if place_meeting(x,y,obj_solid)
 }
 
 //Colisão horizontal com os icones que o mouse pode pegar
-if obj_programa_parent.seg = 0 {
-		if place_meeting(x + hspd, y, obj_programa_parent)
+if obj_icon1.seg = 0 {
+		if place_meeting(x + hspd, y, obj_icon1)
 		{
-				while(!place_meeting(x + sign(hspd), y, obj_programa_parent))
+				while(!place_meeting(x + sign(hspd), y, obj_icon1))
 				{
 					x = x + sign(hspd)
 				}
 			hspd = 0
 		}
 }
-
+if obj_icon2.seg = 0 {
+		if place_meeting(x + hspd, y, obj_icon2)
+		{
+				while(!place_meeting(x + sign(hspd), y, obj_icon2))
+				{
+					x = x + sign(hspd)
+				}
+			hspd = 0
+		}
+}
+if obj_move.seg = 0 {
+		if place_meeting(x + hspd, y, obj_move)
+		{
+				while(!place_meeting(x + sign(hspd), y, obj_move))
+				{
+					x = x + sign(hspd)
+				}
+			hspd = 0
+		}
+}
 //Movendo o X
 x += hspd
 
@@ -45,17 +64,38 @@ if place_meeting(x, y + vspd, obj_solid)
 	vspd = 0
 }
 
-//Colisão horizontal com os icones que o mouse pode pegar
-if obj_programa_parent.seg = 0 {
-		if place_meeting(x, y + vspd, obj_programa_parent)
+//Colisão vertical com os icones que o mouse pode pegar
+if obj_icon1.seg = 0 {
+		if place_meeting(x, y + vspd, obj_icon1)
 		{
-				while(!place_meeting(x, y + sign(vspd), obj_programa_parent))
+				while(!place_meeting(x, y + sign(vspd), obj_icon1))
 				{
 					y = y + sign(vspd)
 				}
 			vspd = 0
 		}
 }
+if obj_icon2.seg = 0 {
+		if place_meeting(x, y + vspd, obj_icon2)
+		{
+				while(!place_meeting(x, y + sign(vspd), obj_icon2))
+				{
+					y = y + sign(vspd)
+				}
+			vspd = 0
+		}
+}
+if obj_move.seg = 0 {
+		if place_meeting(x, y + vspd, obj_move)
+		{
+				while(!place_meeting(x, y + sign(vspd), obj_move))
+				{
+					y = y + sign(vspd)
+				}
+			vspd = 0
+		}
+}
+
 
 //Movendo o Y
 y += vspd
