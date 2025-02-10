@@ -17,12 +17,13 @@ state_machine = function()
 {
 	// checando se esta no chão
 	var _icon_solid = 0
-	
-	if obj_programa_parent.seg = 0
+	if instance_exists(obj_programa_parent)
 	{
-		var _icon_solid = place_meeting(x, y + 1, obj_programa_parent)	
+		if obj_programa_parent.seg = 0
+		{
+			var _icon_solid = place_meeting(x, y + 1, obj_programa_parent)	
+		}
 	}
-	
 	var _ground = place_meeting(x, y + 1, obj_solid) or _icon_solid
 	
 	// armazenando teclas
@@ -103,37 +104,39 @@ state_machine = function()
 			}
 			
 			//Empurrando objetos
-			if obj_move.seg = 0
+			if (instance_exists(obj_move))
 			{
-			if (_ground)
-					{
-					if (_block_push)
-					{
-						//Se tenho blocos que posso mover na lista de colisões 
-						if (ds_list_size(_push_list) > 0)
+				if obj_move.seg = 0
+				{
+				if (_ground)
 						{
-							//Muda o sprite para ele empurrando
-							sprite_index = spr_helper_push
-							max_hspd = 0.9
-					
-							//Faz um loop para identificar todos os blocos que posso mover
-							for(var i = 0; i < ds_list_size(_push_list); i++)
+						if (_block_push)
+						{
+							//Se tenho blocos que posso mover na lista de colisões 
+							if (ds_list_size(_push_list) > 0)
 							{
-								var _block = _push_list[| i];
-								//Movendo o bloco
-								with(_block)
+								//Muda o sprite para ele empurrando
+								sprite_index = spr_helper_push
+								max_hspd = 0.9
+					
+								//Faz um loop para identificar todos os blocos que posso mover
+								for(var i = 0; i < ds_list_size(_push_list); i++)
 								{
-										if !place_meeting(x + other.hspd, y, obj_solid)
-										{
-											x += other.hspd
+									var _block = _push_list[| i];
+									//Movendo o bloco
+									with(_block)
+									{
+											if !place_meeting(x + other.hspd, y, obj_solid)
+											{
+												x += other.hspd
+											}
 										}
 									}
 								}
-							}
-					}else max_hspd = 1.5
+						}else max_hspd = 1.5
+					}
 				}
 			}
-			
 			//se minha velocidade horizontal for 0 e eu estiver no chão
 			if (hspd = 0  and _ground)
 			{

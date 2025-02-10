@@ -1,13 +1,14 @@
 {
   "$GMObject":"",
-  "%Name":"obj_programa_parent",
+  "%Name":"obj_checkpoint",
   "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":{"name":"obj_helper","path":"objects/obj_helper/obj_helper.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":2,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_programa_parent",
+  "name":"obj_checkpoint",
   "overriddenProperties":[],
   "parent":{
     "name":"icones",
@@ -27,16 +28,13 @@
   "physicsShape":1,
   "physicsShapePoints":[],
   "physicsStartAwake":true,
-  "properties":[
-    {"$GMObjectProperty":"v1","%Name":"check_x","filters":[],"listItems":[],"multiselect":false,"name":"check_x","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"x","varType":0,},
-    {"$GMObjectProperty":"v1","%Name":"check_y","filters":[],"listItems":[],"multiselect":false,"name":"check_y","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"y","varType":0,},
-  ],
+  "properties":[],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_icone",
-    "path":"sprites/spr_icone/spr_icone.yy",
+    "name":"spr_checkpoint",
+    "path":"sprites/spr_checkpoint/spr_checkpoint.yy",
   },
   "spriteMaskId":null,
   "visible":true,

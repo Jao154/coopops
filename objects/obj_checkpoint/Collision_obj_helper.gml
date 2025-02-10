@@ -1,8 +1,11 @@
-if (image_index == 1)
-{
-	exit
-}
-image_index = 1;
+//se o sprite ta verde, não salve.
+if (image_index == 5) exit
+
+//animando
+image_speed = 6;
+
+
+//salvando posições
  ini_open("checkpoint.ini")
  
  ini_write_real("helper","x",other.x);
