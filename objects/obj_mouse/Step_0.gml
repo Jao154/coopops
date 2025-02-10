@@ -6,7 +6,7 @@
 state_machine();
 
 //Seguindo o mouse se eu estou em cima dele
-if position_meeting(mouse_x, mouse_y, obj_icon1)
+if position_meeting(mouse_x, mouse_y, obj_programa_parent)
 {
 	if mouse_check_button(mb_left) 
 	{
@@ -17,23 +17,14 @@ if position_meeting(mouse_x, mouse_y, obj_icon1)
 	{
 		seg = 0
 		drag = false;
+		
+		//Conserta o sprite da lixeira
+		if state != "eraser" {
 		cursor_sprite = spr_pmouse
+		}
 	}
 }
-if position_meeting(mouse_x, mouse_y, obj_icon2)
-{
-	if mouse_check_button(mb_left) 
-	{
-		seg = 1
-		cursor_sprite = spr_pmouse_drag
-	}
-	else 
-	{
-		drag = false;
-		seg = 0
-		cursor_sprite = spr_pmouse
-	}
-}
+
 // se o mouse estiver no bug a fase reseta
 if position_meeting(mouse_x,mouse_y,obj_bug)
 {

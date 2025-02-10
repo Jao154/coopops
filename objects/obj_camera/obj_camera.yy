@@ -1,11 +1,12 @@
 {
   "$GMObject":"",
-  "%Name":"obj_load",
+  "%Name":"obj_camera",
   "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":6,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_load",
+  "name":"obj_camera",
   "overriddenProperties":[],
   "parent":{
     "name":"Controladores",
@@ -29,10 +30,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"spr_load",
-    "path":"sprites/spr_load/spr_load.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }

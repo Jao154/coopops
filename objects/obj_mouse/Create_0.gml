@@ -2,8 +2,7 @@
 ///Se o mouse está segurando alguma coisa
 seg = 0;
 drag = false; //controle para gastar apenas quando segura
-
-
+item = noone;
 
 //Sprite do mouse
 cursor_sprite = spr_pmouse
@@ -35,7 +34,7 @@ state_machine = function()
 		break
 		case "eraser":
 		{
-			cursor_sprite = spr_pmouse;
+			cursor_sprite = spr_mouse_lixeira;
 			
 		}
 		break
@@ -54,8 +53,12 @@ state_machine = function()
 					//se eu ainda tiver usos
 					if (paint_uses > 0)
 					{
+						var _grid = 16
+						//Alinha na grid
+						var _x = mouse_x div _grid * _grid
+						var _y = mouse_y div _grid * _grid
 						//cria cor e gasta uso
-						instance_create_layer(mouse_x,mouse_y,"icons",obj_color)
+						instance_create_layer(_x,_y,"icons",obj_color)
 						paint_uses--;
 					}
 				}

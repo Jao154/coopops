@@ -12,8 +12,8 @@
   "out_tilehborder":2,
   "out_tilevborder":2,
   "parent":{
-    "name":"Tileset",
-    "path":"folders/Sprites/Tileset.yy",
+    "name":"Conjuntos de tiles",
+    "path":"folders/Conjuntos de tiles.yy",
   },
   "resourceType":"GMTileSet",
   "resourceVersion":"2.0",
@@ -34,5 +34,5 @@
   "tileWidth":16,
   "tilexoff":0,
   "tileyoff":0,
-  "tile_count":24,
+  "tile_count":30,
 }
