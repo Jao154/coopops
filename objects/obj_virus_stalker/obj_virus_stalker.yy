@@ -10,8 +10,8 @@
   "name":"obj_virus_stalker",
   "overriddenProperties":[],
   "parent":{
-    "name":"icones",
-    "path":"folders/Objetos/icones.yy",
+    "name":"Virus",
+    "path":"folders/Objetos/Virus.yy",
   },
   "parentObjectId":null,
   "persistent":false,

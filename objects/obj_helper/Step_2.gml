@@ -21,7 +21,8 @@ if place_meeting(x,y,obj_solid)
 }
 
 //Colisão horizontal com os icones que o mouse pode pegar
-if obj_icon1.seg = 0 {
+if (instance_exists(obj_icon1) and obj_icon1.seg = 0) 
+{
 		if place_meeting(x + hspd, y, obj_icon1)
 		{
 				while(!place_meeting(x + sign(hspd), y, obj_icon1))
@@ -31,7 +32,8 @@ if obj_icon1.seg = 0 {
 			hspd = 0
 		}
 }
-if obj_icon2.seg = 0 {
+if (instance_exists(obj_icon2) and obj_icon2.seg = 0 )
+{
 		if place_meeting(x + hspd, y, obj_icon2)
 		{
 				while(!place_meeting(x + sign(hspd), y, obj_icon2))
@@ -43,7 +45,8 @@ if obj_icon2.seg = 0 {
 }
 if instance_exists(obj_move)
 {
-	if obj_move.seg = 0 {
+	if obj_move.seg = 0 
+	{
 			if place_meeting(x + hspd, y, obj_move)
 			{
 					while(!place_meeting(x + sign(hspd), y, obj_move))
@@ -68,7 +71,8 @@ if place_meeting(x, y + vspd, obj_solid)
 }
 
 //Colisão vertical com os icones que o mouse pode pegar
-if obj_icon1.seg = 0 {
+if (instance_exists(obj_icon1) and obj_icon1.seg = 0  )
+{
 		if place_meeting(x, y + vspd, obj_icon1)
 		{
 				while(!place_meeting(x, y + sign(vspd), obj_icon1))
@@ -78,7 +82,8 @@ if obj_icon1.seg = 0 {
 			vspd = 0
 		}
 }
-if obj_icon2.seg = 0 {
+if (instance_exists(obj_icon2) and obj_icon2.seg = 0 ) 
+{
 		if place_meeting(x, y + vspd, obj_icon2)
 		{
 				while(!place_meeting(x, y + sign(vspd), obj_icon2))

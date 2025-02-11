@@ -8,8 +8,8 @@
   "name":"obj_cleaner_particles",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objetos",
-    "path":"folders/Objetos.yy",
+    "name":"Particles",
+    "path":"folders/Objetos/Particles.yy",
   },
   "parentObjectId":null,
   "persistent":false,

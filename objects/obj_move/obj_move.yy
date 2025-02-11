@@ -9,8 +9,8 @@
   "name":"obj_move",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objetos",
-    "path":"folders/Objetos.yy",
+    "name":"icones",
+    "path":"folders/Objetos/icones.yy",
   },
   "parentObjectId":{
     "name":"obj_programa_parent",
