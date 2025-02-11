@@ -23,7 +23,7 @@
   ],
   "name":"spr_virus_corrupter",
   "nineSlice":null,
-  "origin":4,
+  "origin":9,
   "parent":{
     "name":"Virus",
     "path":"folders/Sprites/Virus.yy",
@@ -75,7 +75,7 @@
     ],
     "visibleRange":null,
     "volume":1.0,
-    "xorigin":7,
+    "xorigin":8,
     "yorigin":8,
   },
   "swatchColours":null,

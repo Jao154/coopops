@@ -14,6 +14,7 @@ function player_take_damage()
 		{
 			if (timer <= 0)
 		{
+			screen_shake(30,20)
 			life--;
 			timer = dmg_timer
 		}

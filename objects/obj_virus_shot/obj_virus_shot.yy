@@ -1,15 +1,16 @@
 {
   "$GMObject":"",
-  "%Name":"obj_bug",
+  "%Name":"obj_virus_shot",
   "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":{"name":"obj_helper","path":"objects/obj_helper/obj_helper.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_bug",
+  "name":"obj_virus_shot",
   "overriddenProperties":[],
   "parent":{
-    "name":"icones",
-    "path":"folders/Objetos/icones.yy",
+    "name":"Virus",
+    "path":"folders/Objetos/Virus.yy",
   },
   "parentObjectId":null,
   "persistent":false,
