@@ -13,7 +13,7 @@
   "name":"sfx_menu_out",
   "parent":{
     "name":"SFX",
-    "path":"folders/Sprites/Sounds/SFX.yy",
+    "path":"folders/Sounds/SFX.yy",
   },
   "preload":false,
   "resourceType":"GMSound",

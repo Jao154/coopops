@@ -9,11 +9,11 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":388.3102,
+  "duration":0.0,
   "name":"snd_A_Very_Brady_Special",
   "parent":{
     "name":"Sounds",
-    "path":"folders/Sprites/Sounds.yy",
+    "path":"folders/Sounds.yy",
   },
   "preload":false,
   "resourceType":"GMSound",

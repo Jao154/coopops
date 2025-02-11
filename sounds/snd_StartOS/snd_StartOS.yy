@@ -1,6 +1,6 @@
 {
   "$GMSound":"",
-  "%Name":"sfx_menu_in",
+  "%Name":"snd_StartOS",
   "audioGroupId":{
     "name":"audiogroup_default",
     "path":"audiogroups/audiogroup_default",
@@ -9,17 +9,17 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":1.211723,
-  "name":"sfx_menu_in",
+  "duration":8.542041,
+  "name":"snd_StartOS",
   "parent":{
-    "name":"SFX",
-    "path":"folders/Sounds/SFX.yy",
+    "name":"Sounds",
+    "path":"folders/Sounds.yy",
   },
   "preload":false,
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"sfx_menu_in.wav",
+  "soundFile":"snd_StartOS.mp3",
   "type":0,
-  "volume":1.0,
+  "volume":0.7,
 }
