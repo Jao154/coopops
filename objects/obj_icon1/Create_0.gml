@@ -1,4 +1,5 @@
 /// @description
+event_inherited()
 //Se estou sendo segurado
 seg = 0
 alpha = 1 //Transparência

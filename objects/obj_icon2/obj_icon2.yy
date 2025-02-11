@@ -14,8 +14,8 @@
     "path":"folders/Objetos/icones.yy",
   },
   "parentObjectId":{
-    "name":"obj_solid",
-    "path":"objects/obj_solid/obj_solid.yy",
+    "name":"obj_programa_parent",
+    "path":"objects/obj_programa_parent/obj_programa_parent.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
