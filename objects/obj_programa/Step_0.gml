@@ -23,15 +23,46 @@ else
 	}
 }
 
-//se estou subindo
-if (up)
+//se n fui coletado
+if (_get == false)
 {
-	y -= 0.08;
+	//se estou subindo
+	if (up)
+	{
+		y -= 0.08;
 	
-}
-//se não estou subindo
+	}
+	//se não estou subindo
+	else
+	{
+		y += 0.08;
+	}
+}	
 else
+
+//coletado
 {
-	y += 0.08;
+	//subindo
+	if (y > _y - 20)
+	{
+		y -= 0.2
+	}
+	if (y <= _y - 20)
+	{
+		
+		//aumentando
+		image_xscale = lerp(image_xscale,3,0.05)
+		image_yscale = lerp(image_yscale,3,0.05)
+		image_alpha = lerp(image_alpha,0,0.05)
+		
+		//ganhando
+		if (image_alpha <= 0.2)
+		{
+			if (win = false)
+			{
+				win = true
+				alarm[1] = 60
+			}
+		}
+	}
 }
-	

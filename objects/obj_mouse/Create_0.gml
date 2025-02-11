@@ -17,6 +17,8 @@ eraser_uses = 2;
 folder_uses = 2;
 
 
+life = 3;
+
 //controlar o tempo do reinicio de fase
 lose = false;
 

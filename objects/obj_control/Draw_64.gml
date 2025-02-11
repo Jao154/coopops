@@ -1,6 +1,5 @@
 /// @description Desenhando os elementos visuais
 
-draw_text(20,40, "Arraste :" + string(obj_mouse.drag_uses))
 
 //tava bugando
 //draw_text(20,60, "SEGURANDO :" + string(global.drag))
@@ -88,6 +87,49 @@ if (menu)
 #endregion
 
 //Icones
+
+
+//Drag
+var _2_color = c_white //Cor do drag, para indicar que está sendo usada
+//Colisão com drag
+var _drag = point_in_rectangle(_mouse_x, _mouse_y, 120, _gui_h - 70, 180, _gui_h)
+
+//Se eu clico no drag
+if _drag
+{
+	
+//alterna entre estados
+	if mouse_check_button_pressed(mb_left)
+	{
+		if (obj_mouse.state != "none")
+		{
+			obj_mouse.state = "none" 
+		}
+		else
+		{
+			obj_mouse.state = "none" 
+		}
+	}
+	
+}
+
+//Reseta a cor quando eu paro de usar o drag
+if (obj_mouse.drag_uses <= 0)
+{		
+	_2_color = c_red
+}
+else
+{
+	_2_color = c_white
+}
+
+	
+//Desenha o sprite do drag
+draw_sprite_ext(spr_pmouse_16, 1, 1200, _gui_h - 45, 5, 5, 0, _2_color, 1)
+draw_text_transformed(1150, _gui_h - 50, string(obj_mouse.drag_uses), _txt_scale, _txt_scale, 0)
+
+
+
 
 //Se eu já coletei o paint
 if (global.paint)

@@ -3,7 +3,7 @@ vspd = 0		//Velocidade Vertical
 dir    =  0		//Direção que estou olhando
 grav = .2			//Gravidade
 
-
+life = 3;
 /// @description
 //Se estou sendo segurado
 seg = 0
