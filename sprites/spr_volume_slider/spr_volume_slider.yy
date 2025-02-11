@@ -26,7 +26,7 @@
   "origin":4,
   "parent":{
     "name":"Volume",
-    "path":"folders/Sprites/Hud/Volume.yy",
+    "path":"folders/Sprites/Volume.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

@@ -1,0 +1,24 @@
+{
+  "$GMPath":"",
+  "%Name":"path_reto_curto",
+  "closed":false,
+  "kind":1,
+  "name":"path_reto_curto",
+  "parent":{
+    "name":"Paths",
+    "path":"folders/Paths.yy",
+  },
+  "points":[
+    {"speed":100.0,"x":325.79138,"y":803.7344,},
+    {"speed":100.0,"x":356.20316,"y":797.9991,},
+    {"speed":100.0,"x":389.76196,"y":802.7932,},
+    {"speed":100.0,"x":423.85022,"y":794.2638,},
+    {"speed":100.0,"x":472.11493,"y":799.85205,},
+    {"speed":100.0,"x":502.43845,"y":792.32263,},
+    {"speed":100.0,"x":537.6737,"y":803.58734,},
+    {"speed":100.0,"x":539.87964,"y":803.5579,},
+  ],
+  "precision":4,
+  "resourceType":"GMPath",
+  "resourceVersion":"2.0",
+}

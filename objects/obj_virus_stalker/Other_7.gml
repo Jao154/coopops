@@ -1,0 +1,1 @@
+if sprite_index == spr_stalker_die instance_destroy(id)

@@ -1,14 +1,71 @@
 seg = 0; //se estou sendo segurado
 
-last_x = x
-last_y = y
 
 //status
 life = 10;
-velocity = 0.2;
+velocity = 1;
+_id = id //para o antivirus
+
+path_begin = false;
 
 
+state = "patrolling"
+state_machine = function()
+{
+	switch(state)
+	{
+		case "patrolling": //Patrulhando
+		{
+		
+			if (path_begin == false) //Se o path não começou
+			{
+		
+				path_begin = true;// O path começa
+				path_start(path,velocity,path_action_reverse,0)
+			}
+			break
+		}
+		case "chase":
+		{
+			path_end(); //parando o path
+			path_begin = false; //O path ja começou
+			
+			//Perseguindo o alvo mais próximo
+			if (distance_to_object(obj_helper)  > distance_to_point(mouse_x,mouse_y) )
+			{
+				if (obj_mouse.state != "antivirus")
+				{
+					move_towards_point(mouse_x,mouse_y,velocity);
+				}
+			}
+			else
+			{
+				if (obj_helper.state != "folder")
+				{
+					move_towards_point(obj_helper.x,obj_helper.y,velocity);
+				}
+				else
+				{
+					if (obj_mouse.state != "antivirus")
+					{
+						move_towards_point(mouse_x,mouse_y,velocity);
+					}				
+				}
+			}
+			
+		}
+		break
+		case "returning": //Retornado ao posto(obj_guard)
+		{
+			move_towards_point(obj_guard.x,obj_guard.y,velocity );
+		}
+		break
+		case "die":
+		{
+			sprite_index = spr_guard_die;
+		}
+		break
+	}
+}
 
-//identidade
-_id = id
 

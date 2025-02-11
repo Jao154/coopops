@@ -26,8 +26,8 @@
   "nineSlice":null,
   "origin":7,
   "parent":{
-    "name":"Virus",
-    "path":"folders/Sprites/Virus.yy",
+    "name":"Patrol",
+    "path":"folders/Sprites/Virus/Patrol.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

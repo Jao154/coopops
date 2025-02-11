@@ -178,10 +178,11 @@ state_machine = function()
 				
 				if mouse_check_button_pressed(mb_left)
 				{
+					
 					enemy_id.life--; //reduz a vida
 					enemy_id.velocity = 0; // faz ele parar
 					enemy_id.alarm[0] = 10; // tempo para ele voltar a andar
-					screen_shake(10,5)
+					screen_shake(15,10)
 					//efeito mola
 					enemy_id.image_xscale = lerp(image_xscale,2,0.5)
 					enemy_id.image_yscale = lerp(image_yscale,0.2,0.5)

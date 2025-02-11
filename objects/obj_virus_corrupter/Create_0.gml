@@ -1,18 +1,13 @@
 seg = 0; //se estou sendo segurado
+
+
+//-----Shot-----
 shot_timer = 0
 shot_wait = 120;
 
-
-last_x = x
-last_y = y
-
-//status
+//------Status------
 life = 10;
-velocity = 0.2;
-
-
-
-//identidade
+velocity = 0.5;
 _id = id
 
 state = "moving"
@@ -26,7 +21,7 @@ state_machine = function()
 					if (obj_helper.state != "folder")
 					{
 						if distance_to_object(obj_helper) <= 70 state = "shooting"
-						move_towards_point(obj_helper.x,obj_helper.y,0.5)
+						move_towards_point(obj_helper.x,obj_helper.y,velocity);
 					}
 					
 				
@@ -36,13 +31,16 @@ state_machine = function()
 			{
 				speed = 0;
 				
-				//atirando
+				//Tempo de espera acabou
 				if (shot_timer <= 0)
 				{
+					
+					//Mirando
 					var _dir = point_direction(x,y,obj_helper.x,obj_helper.y)
 					if (obj_helper.state != "folder")
 					{
-						var _shot = instance_create_layer(x,y,"Instances",obj_virus_shot)
+						//Atirando
+						var _shot = instance_create_layer(x,y,"virus",obj_virus_shot)
 						_shot.speed = 1;
 						_shot.direction = _dir ; 
 						shot_timer = shot_wait;
@@ -51,6 +49,11 @@ state_machine = function()
 				
 				//se estou longe eu me aproximo
 				if distance_to_object(obj_helper) >= 70 state = "moving"
+			}
+			break
+			case "die":
+			{
+				sprite_index = spr_corruptor_die
 			}
 			break
 		}
