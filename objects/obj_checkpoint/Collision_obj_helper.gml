@@ -8,12 +8,29 @@ obj_mouse.drag_uses = 10;
 
 //salvando posições
  ini_open("checkpoint.ini")
+ if (instance_exists(obj_helper))
+ {
+	ini_write_real("helper","x",other.x);
+	ini_write_real("helper","y",other.y);
+ }
  
- ini_write_real("helper","x",other.x);
- ini_write_real("helper","y",other.y);
- ini_write_real("icon1","x",obj_icon1.x);
- ini_write_real("icon1","y",obj_icon1.y);
- ini_write_real("icon2","x",obj_icon2.x);
- ini_write_real("icon2","y",obj_icon2.y);
+ 
+ if (instance_exists(obj_icon1))
+	{
+		ini_write_real("icon1","x",obj_icon1.x);
+		ini_write_real("icon1","y",obj_icon1.y);
+	}
+ 
+ if (instance_exists(obj_icon2))
+ {
+	ini_write_real("icon2","x",obj_icon2.x);
+	ini_write_real("icon2","y",obj_icon2.y);
+ }
+ 
+ if (instance_exists(obj_move))
+ {
+	ini_write_real("move","x",obj_move.x)
+	ini_write_real("move","y",obj_move.y)
+ }
  
  ini_close();

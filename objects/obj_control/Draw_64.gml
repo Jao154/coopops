@@ -68,6 +68,15 @@ if (menu)
 		if mouse_check_button_pressed(mb_left) 
 		{
 			audio_play_sound(sfx_menu_select,100,0)
+			
+			if file_exists("checkpoint.ini")
+			{
+				file_delete("checkpoint.ini")
+			}
+			if file_exists("programas.ini")
+			{
+				file_delete("programas.ini")
+			}
 			game_end()
 		}
 	}

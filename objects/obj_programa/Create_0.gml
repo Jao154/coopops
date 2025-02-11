@@ -1,5 +1,11 @@
 image_speed = 30
 
+// ----Variables definition---
+//frame = icone
+//name = programa a ser consertado
+
+
+
 //salvando meu y
 _y = y
 

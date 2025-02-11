@@ -24,14 +24,25 @@ else
 }
 
 //se estou subindo
+
 if (up)
 {
-	y -= 0.08;
+	y -= 0.02;
 	
 }
 //se não estou subindo
 else
 {
-	y += 0.08;
+	y += 0.02;
 }
+
+//Se coletou algum programa, fica mais claro
+if file_exists("programas.ini")
+{
 	
+	//variable definition, se o programa foi desbloeada
+	if (programa)
+	{
+		image_alpha = 0.5
+	}
+}

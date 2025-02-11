@@ -26,7 +26,7 @@
   "origin":0,
   "parent":{
     "name":"Menu Inicial",
-    "path":"folders/Sprites/Menu Inicial.yy",
+    "path":"folders/Sprites/Mouse/Menu Inicial.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
