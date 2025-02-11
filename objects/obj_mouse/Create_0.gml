@@ -4,6 +4,8 @@ seg = 0;
 drag = false; //controle para gastar apenas quando segura
 item = noone;
 
+global.mouse_life = global.mouse_life_max
+
 enemy_id = noone;
 
 //Sprite do mouse

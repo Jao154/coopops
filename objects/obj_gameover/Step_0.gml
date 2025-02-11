@@ -14,8 +14,8 @@ else
 }
 
 //-----------Se o o mouse ou helper perderem as vidas----------
-if (obj_mouse.life <= 0 or obj_helper.life <= 0)
-{
+if (global.mouse_life <= 0 or global.helper_life <= 0)
+{	
 	room_restart();
 }
 

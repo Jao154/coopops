@@ -8,13 +8,16 @@ global.check_x = 0;
 global.check_y = 0;
 global.check_icons = false;
 
+
+global.course_name = noone;
+
 //Jogador
 global.helper_life = 3 //Quantas vidas
 global.helper_life_max = 3//Vida máxima
 //Icones coletados
 global.paint = false;
 global.lixeira = false;
-global.folder = false;
+global.folder = true;
 global.antivirus = true;
 global.cleaner = false;
 

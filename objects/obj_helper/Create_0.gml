@@ -5,7 +5,7 @@ grav = .2			//Gravidade
 
 timer = 0;
 dmg_timer = 120;
-life = 3;
+
 /// @description
 //Se estou sendo segurado
 seg = 0
@@ -17,6 +17,8 @@ last_y = y
 
 //Tamanho da sprite
 tam = sprite_width
+global.helper_life = global.helper_life_max
+
 
 //cleaner
 cleaner_wait = 600; //recarga

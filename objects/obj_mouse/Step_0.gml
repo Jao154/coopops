@@ -33,7 +33,7 @@ if position_meeting(mouse_x,mouse_y,obj_mensagem_erro)
 if (life_timer <= 0)
 {
 	screen_shake(30,20)
-	life--;
+	global.mouse_life--;
 	life_timer = 90;
 }
 

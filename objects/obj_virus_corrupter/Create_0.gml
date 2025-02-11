@@ -10,7 +10,7 @@ last_y = y
 life = 10;
 velocity = 0.2;
 
-range = 70;
+
 
 //identidade
 _id = id
@@ -22,9 +22,12 @@ state_machine = function()
 		{
 			case "moving":
 			{
-				move_towards_point(obj_helper.x,obj_helper.y,0.5)
-				if distance_to_object(obj_helper) <= 60 state = "shooting"
-			
+					//se eu estou longe, eu me aproximo				
+					if (obj_helper.state != "folder")
+					{
+						if distance_to_object(obj_helper) <= 70 state = "shooting"
+						move_towards_point(obj_helper.x,obj_helper.y,0.5)
+					}
 					
 				
 			}
@@ -32,15 +35,21 @@ state_machine = function()
 			case "shooting":
 			{
 				speed = 0;
+				
+				//atirando
 				if (shot_timer <= 0)
 				{
 					var _dir = point_direction(x,y,obj_helper.x,obj_helper.y)
-					var _shot = instance_create_layer(x,y,"Instances",obj_virus_shot)
-					_shot.speed = 1;
-					_shot.direction = _dir ; 
-					shot_timer = shot_wait;
-				
+					if (obj_helper.state != "folder")
+					{
+						var _shot = instance_create_layer(x,y,"Instances",obj_virus_shot)
+						_shot.speed = 1;
+						_shot.direction = _dir ; 
+						shot_timer = shot_wait;
+					}
 				}
+				
+				//se estou longe eu me aproximo
 				if distance_to_object(obj_helper) >= 70 state = "moving"
 			}
 			break
