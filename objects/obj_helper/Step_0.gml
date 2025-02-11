@@ -2,6 +2,11 @@
 mask_index = spr_helper_idle
 state_machine();
 
+if (timer >= 0)
+{
+	timer--;
+}
+
 #region cleaner control
 if (cleaner_timer >= -10)
 {

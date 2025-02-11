@@ -1,7 +1,7 @@
 ///Mouse
 global.clicks = 10 //Cliques eu eu ainda tenho
 global.mouse_life = 5 //Quantas vidas o mouse tem
-
+global.mouse_life_max = 5 //Vidas máximas
 ///Checkpoint
 global.check_point = false;
 global.check_x = 0;
@@ -9,13 +9,13 @@ global.check_y = 0;
 global.check_icons = false;
 
 //Jogador
-global.helper_life = 3 //Quantas vidas o mouse tem
-
+global.helper_life = 3 //Quantas vidas
+global.helper_life_max = 3//Vida máxima
 //Icones coletados
 global.paint = false;
 global.lixeira = false;
 global.folder = false;
-global.antivirus = false;
+global.antivirus = true;
 global.cleaner = false;
 
 

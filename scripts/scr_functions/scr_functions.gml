@@ -7,3 +7,15 @@ function screen_shake(_len, _time)
 		alarm[0] = shake_time
 	}
 }
+
+function player_take_damage()
+{
+	with (obj_helper)
+		{
+			if (timer <= 0)
+		{
+			life--;
+			timer = dmg_timer
+		}
+	}
+}

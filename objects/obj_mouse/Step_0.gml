@@ -26,20 +26,13 @@ if position_meeting(mouse_x,mouse_y,obj_mensagem_erro)
 	//tempotizador de dano
 	life_timer--;
 	
-	//quando o temporidador chegar a zero
-	if (life_timer <= 0)
-	{
-		
-		//diminui a vida e reseta o tempo
-		life--;
-		life_timer = 90;
-	}
 
 }
 
 //se o timer
 if (life_timer <= 0)
 {
+	screen_shake(30,20)
 	life--;
 	life_timer = 90;
 }
