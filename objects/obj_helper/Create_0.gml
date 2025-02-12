@@ -3,7 +3,7 @@ vspd = 0		//Velocidade Vertical
 dir    =  0		//Direção que estou olhando
 grav = .2			//Gravidade
 
-
+timer_die = 60
 
 timer = 0;
 dmg_timer = 120;
@@ -302,12 +302,24 @@ state_machine = function()
 			{
 				image_blend = c_white;
 			}
-
-
+		}
+		break
+	
+		case "die":
+		{
+			hspd = 0
+			vspd = 0
+			sprite_index = spr_helper_die
+			timer_die--
 			
-			
-			
-			
+			if timer_die <= 0
+			{
+				if !instance_exists(obj_transicao)
+				{
+				var _trans = instance_create_layer(0,0,layer, obj_transicao)
+						_trans.dest = room
+				}
+			}
 			
 		}
 		break

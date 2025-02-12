@@ -16,13 +16,13 @@ else
 //-----------Se o o mouse ou helper perderem as vidas----------
 if (global.mouse_life <= 0 or global.helper_life <= 0)
 {	
-	room_restart();
+	obj_helper.state = "die"
 }
 
 //----------Se cai no buraco---------
 if (obj_helper.y > room_height + 16)
 {
-	room_restart();
+	obj_helper.state = "die"
 }
 
 //Mouse em cima do bug
@@ -58,7 +58,7 @@ else
 //Se meu tempo chegar a 0, eu perdi
 if (showtime <= 0)
 	{
-		room_restart();	
+		obj_helper.state = "die"
 	}
 	
 //--------------------------------------

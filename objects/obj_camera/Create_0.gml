@@ -2,7 +2,13 @@
 
 global.resolucao_w			= 1280
 global.resolucao_h			= 720
-global.resolucao_scale		= 5
+if room != rm_menu 
+{
+	global.resolucao_scale		= 3	
+} else
+{
+	global.resolucao_scale		= 5	
+}
 view_target				= obj_helper //Quem a camera está seguindo
 
 x = view_target.x

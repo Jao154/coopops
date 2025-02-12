@@ -1,15 +1,16 @@
 {
   "$GMObject":"",
-  "%Name":"obj_bug",
+  "%Name":"obj_paint_restore",
   "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":{"name":"obj_helper","path":"objects/obj_helper/obj_helper.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_bug",
+  "name":"obj_paint_restore",
   "overriddenProperties":[],
   "parent":{
-    "name":"Colisores",
-    "path":"folders/Objetos/Colisores.yy",
+    "name":"icones",
+    "path":"folders/Objetos/icones.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -30,9 +31,9 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_mensagem_erro",
-    "path":"sprites/spr_mensagem_erro/spr_mensagem_erro.yy",
+    "name":"spr_paint_restore",
+    "path":"sprites/spr_paint_restore/spr_paint_restore.yy",
   },
   "spriteMaskId":null,
-  "visible":false,
+  "visible":true,
 }

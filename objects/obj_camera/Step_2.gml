@@ -1,6 +1,11 @@
 /// @description
 camera_set_view_size(view_camera[0], global.view_widht, global.view_height)
 
+if room != rm_menu
+{
+	global.resolucao_scale = 2	
+}
+
 //Segue o alvo da camera só se ele existir
 if instance_exists(view_target)
 {

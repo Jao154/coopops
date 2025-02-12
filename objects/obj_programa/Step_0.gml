@@ -25,7 +25,7 @@ else
 
 //se n fui coletado
 if (_get == false)
-{
+		{
 	//se estou subindo
 	if (up)
 	{
@@ -42,13 +42,28 @@ else
 
 //coletado
 {
+		with(obj_helper)
+		{
+			hspd = 0
+			vspd = 0
+		}
+
+		with(obj_virus_stalker)
+		{
+				velocity = 0
+		}
+		
+		if instance_exists(obj_virus_shot)
+		{
+			instance_destroy(obj_virus_shot)	
+		}
 	//subindo
 	if (y > _y - 20)
 	{
 		y -= 0.2
 	}
 	if (y <= _y - 20)
-	{
+	{	
 		
 		//aumentando
 		image_xscale = lerp(image_xscale,3,0.05)

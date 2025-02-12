@@ -1,2 +1,2 @@
 //reseta a fase
-room_restart();
+obj_helper.state = "die"

@@ -1,1 +1,4 @@
-room_restart();
+with(other)
+{
+	state = "die"	
+}

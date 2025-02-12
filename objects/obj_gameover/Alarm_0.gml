@@ -1,1 +1,1 @@
-room_restart();
+obj_helper.state = "die"
