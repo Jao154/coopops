@@ -168,10 +168,10 @@
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
-    {"roomId":{"name":"rm_eraser_level","path":"rooms/rm_eraser_level/rm_eraser_level.yy",},},
-    {"roomId":{"name":"rm_menu","path":"rooms/rm_menu/rm_menu.yy",},},
     {"roomId":{"name":"rm_title","path":"rooms/rm_title/rm_title.yy",},},
+    {"roomId":{"name":"rm_menu","path":"rooms/rm_menu/rm_menu.yy",},},
     {"roomId":{"name":"rm_paint_level","path":"rooms/rm_paint_level/rm_paint_level.yy",},},
+    {"roomId":{"name":"rm_eraser_level","path":"rooms/rm_eraser_level/rm_eraser_level.yy",},},
   ],
   "templateType":null,
   "TextureGroups":[
