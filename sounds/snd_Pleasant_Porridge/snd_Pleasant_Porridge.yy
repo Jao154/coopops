@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_Pleasant_Porridge",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":171.49385,
+  "name":"snd_Pleasant_Porridge",
+  "parent":{
+    "name":"Trilha sonora",
+    "path":"folders/Sounds/Trilha sonora.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_Pleasant_Porridge.mp3",
+  "type":0,
+  "volume":1.0,
+}

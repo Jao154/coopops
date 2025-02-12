@@ -1,5 +1,6 @@
 /// @description
-
+dest_x = -1
+dest_y = -1
 //Tamaho do sprite
 tamanho = sprite_get_width(spr_trans)
 

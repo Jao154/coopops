@@ -12,8 +12,8 @@
   "duration":8.542041,
   "name":"snd_StartOS",
   "parent":{
-    "name":"Sounds",
-    "path":"folders/Sounds.yy",
+    "name":"Trilha sonora",
+    "path":"folders/Sounds/Trilha sonora.yy",
   },
   "preload":false,
   "resourceType":"GMSound",

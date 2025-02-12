@@ -8,6 +8,13 @@ obj_mouse.drag_uses = 10;
 
 //salvando posições
  ini_open("checkpoint.ini")
+ 
+ 
+ if (global.paint)
+ {
+	ini_write_real("paint","uses",global.paint_uses) 
+ }
+ 
  if (instance_exists(obj_helper))
  {
 	ini_write_real("helper","x",other.x);

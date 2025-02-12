@@ -1,4 +1,5 @@
 /// @description
+
 global.resolucao_w			= 1280
 global.resolucao_h			= 720
 global.resolucao_scale		= 5

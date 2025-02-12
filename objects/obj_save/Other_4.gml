@@ -1,4 +1,6 @@
 
+if (room != rm_menu)
+{
 //--------CHECKPOINT--------
 if (file_exists("checkpoint.ini")) //se tocar pela primeira vez
 {
@@ -29,14 +31,22 @@ if (file_exists("checkpoint.ini")) //se tocar pela primeira vez
 	}
 	ini_close();
 }
-
-
+else
+{
+	global.paint_uses = 10;
+}
+}
 //-------SAVE DOS PROGRAMAS
 //Se coletei algum programa, le o programa coletado
 if file_exists("programas.ini")
 {
 	
 	ini_open("programas.ini")
+	if (global.paint)
+	{
+		global.paint_uses = ini_read_real("paint","uses",10);
+	}
+	
 	if (ini_key_exists("paint","bool"))
 	{
 		global.paint = ini_read_real("paint","bool",false);

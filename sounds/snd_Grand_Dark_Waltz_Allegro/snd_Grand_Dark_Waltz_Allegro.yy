@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_Grand_Dark_Waltz_Allegro",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":385.35834,
+  "name":"snd_Grand_Dark_Waltz_Allegro",
+  "parent":{
+    "name":"Trilha sonora",
+    "path":"folders/Sounds/Trilha sonora.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_Grand_Dark_Waltz_Allegro.mp3",
+  "type":0,
+  "volume":1.0,
+}

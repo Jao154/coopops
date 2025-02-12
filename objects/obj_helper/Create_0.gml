@@ -3,6 +3,8 @@ vspd = 0		//Velocidade Vertical
 dir    =  0		//Direção que estou olhando
 grav = .2			//Gravidade
 
+
+
 timer = 0;
 dmg_timer = 120;
 
@@ -32,6 +34,9 @@ hspd_normal = 1.5;
 vspd_normal = 3.8;
 max_hspd = hspd_normal //Velocidade Máxima
 max_vspd = vspd_normal //Pulo máximo
+
+coyote_time = 10;
+
 /*
 _cam = camera_create()
 camera_set_view_target(_cam,obj_helper)
@@ -49,7 +54,7 @@ state_machine = function()
 			_icon_solid1 = place_meeting(x, y + 1, obj_icon1)	
 		}
 	}
-		var _icon_solid2 = 0
+	var _icon_solid2 = 0
 	if instance_exists(obj_icon2)
 	{
 		if obj_icon2.seg = 0
@@ -58,9 +63,19 @@ state_machine = function()
 		}
 	}
 	
+	//colisão com o cd	
+	var _move_solid = 0
+	if instance_exists(obj_move)
+	{
+		if obj_move.seg = 0
+		{
+			_move_solid = place_meeting(x, y + 1, obj_move)	
+		}
+	}
 	
 	
-	var _ground = place_meeting(x, y + 1, obj_solid) or _icon_solid1 or _icon_solid2
+	
+	var _ground = place_meeting(x, y + 1, obj_solid) or _icon_solid1 or _icon_solid2 or _move_solid
 	
 	// armazenando teclas
 	var _left, _right, _up
@@ -87,7 +102,14 @@ state_machine = function()
 	var _push_list = ds_list_create()
 	var _block_push = instance_place_list(x + hspd + sign(hspd) , y, obj_move, _push_list, 0)
 
-	
+	if (_ground)
+	{
+		coyote_time = 10;
+	}
+	else
+	{
+		coyote_time--;
+	}
 	switch(state)
 	{
 		
@@ -100,7 +122,7 @@ state_machine = function()
 			hspd = 0; //zerando a velocidade
 			
 			//pulando
-			if (_up and _ground)
+			if (_up and coyote_time > 0)
 			{
 				audio_play_sound(sfx_jump,99,0,,,random_range(0.8,1.2))
 				vspd -= max_vspd
@@ -140,7 +162,7 @@ state_machine = function()
 			}
 			
 			//pulando
-			if (_up and _ground)
+			if (_up and coyote_time > 0)
 			{
 				audio_play_sound(sfx_jump,99,0,,,random_range(0.8,1.2))
 				vspd -= max_vspd

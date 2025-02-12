@@ -33,6 +33,9 @@
     {"$GMObjectProperty":"v1","%Name":"virus","filters":[
         "GMObject",
       ],"listItems":[],"multiselect":false,"name":"virus","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resource":{"name":"obj_virus_stalker","path":"objects/obj_virus_stalker/obj_virus_stalker.yy",},"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"obj_virus_stalker","varType":5,},
+    {"$GMObjectProperty":"v1","%Name":"_xawake","filters":[],"listItems":[],"multiselect":false,"name":"_xawake","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":1,},
+    {"$GMObjectProperty":"v1","%Name":"awaker","filters":[],"listItems":[],"multiselect":false,"name":"awaker","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"False","varType":3,},
+    {"$GMObjectProperty":"v1","%Name":"_yawake","filters":[],"listItems":[],"multiselect":false,"name":"_yawake","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":0,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",

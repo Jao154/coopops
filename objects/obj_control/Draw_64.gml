@@ -114,11 +114,11 @@ if (global.paint)
 		var _paint = point_in_rectangle(_mouse_x, _mouse_y, 120, _gui_h - 70, 180, _gui_h)
 
 		//Se eu clico no paint
-		if _paint
+		if (_paint)
 		{
 	
 			//alterna entre estados
-				if mouse_check_button_pressed(mb_left)
+				if mouse_check_button_pressed(mb_left) 
 				{
 					 if (obj_mouse.state != "paint")
 					 {
@@ -145,7 +145,8 @@ if (global.paint)
 	
 		//Desenha o sprite do paint
 		draw_sprite_ext(_sprite, 1, 150, _gui_h - 45, 5, 5, 0, _2_color, 1)
-		draw_text_transformed(175, _gui_h - 25, string(obj_mouse.paint_uses), _txt_scale, _txt_scale, 0)
+		draw_text_transformed(175, _gui_h - 25, string(global.paint_uses), _txt_scale, _txt_scale, 0)
+		draw_text_transformed(140,_gui_h - 50, string(1), _txt_scale, _txt_scale, 0)
 }
 
 //Lixeira
@@ -158,7 +159,7 @@ if (global.lixeira)
 		var _lixeira = point_in_rectangle(_mouse_x, _mouse_y, 220, _gui_h - 70, 280, _gui_h)
 
 		//Se eu clico na lixeira
-		if _lixeira
+		if (_lixeira )
 		{
 			//alterna entre os estados
 			if mouse_check_button_pressed(mb_left)
@@ -187,7 +188,7 @@ if (global.lixeira)
 
 		//Desenha o sprite da lixeira
 		draw_sprite_ext(_sprite, 2, 250, _gui_h - 45, 5, 5, 0, _l_color, 1)
-		draw_text_transformed(275, _gui_h - 25, string(obj_mouse.eraser_uses), _txt_scale, _txt_scale, 0)
+		draw_text_transformed(243,_gui_h - 50, string(2), _txt_scale, _txt_scale, 0)
 }
 
 
@@ -245,6 +246,7 @@ if (global.folder)
 		//Desenha o sprite da pasta
 		draw_sprite_ext(_sprite, 3, 350, _gui_h - 45, 5, 5, 0, _2_color, 1)
 		draw_text_transformed(375, _gui_h - 25, string(obj_mouse.folder_uses), _txt_scale, _txt_scale, 0)
+		draw_text_transformed(344,_gui_h - 50, string(3), _txt_scale, _txt_scale, 0)
 }
 
 

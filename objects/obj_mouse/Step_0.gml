@@ -10,12 +10,12 @@ if position_meeting(mouse_x,mouse_y,obj_bug)
 {
 			screen_shake(20, life_timer)
 			bug_timer = bug_timer_s - delta_time/1000000
-			cursor_sprite = spr_pmouse_dmg
+			
 } else
 {
 	lose = false
 	screen_shake(0,0)
-	cursor_sprite = spr_pmouse
+
 	//if (life_timer <= 90)
 	//	{
 	//		life_timer++;

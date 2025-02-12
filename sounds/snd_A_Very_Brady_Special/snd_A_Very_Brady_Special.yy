@@ -12,8 +12,8 @@
   "duration":0.0,
   "name":"snd_A_Very_Brady_Special",
   "parent":{
-    "name":"Sounds",
-    "path":"folders/Sounds.yy",
+    "name":"Trilha sonora",
+    "path":"folders/Sounds/Trilha sonora.yy",
   },
   "preload":false,
   "resourceType":"GMSound",

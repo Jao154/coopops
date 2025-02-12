@@ -4,7 +4,7 @@ showtime = ceil(mytime)
 
 
 //------------Se o arraste chegar a zero---------
-if (obj_mouse.drag_uses <= 0 and lose == false)//lose para controlar
+if ((obj_mouse.drag_uses <= 0) and lose == false)//lose para controlar
 {
 	lose = true;
 }
@@ -51,6 +51,7 @@ else
 {
 	
 	//Se não perdi, Tenho tempo
+	
 	mytime = 5
 }
 

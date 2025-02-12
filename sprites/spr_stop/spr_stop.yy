@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"SPR_Colisions",
-    "path":"folders/Sprites/SPR_Colisions.yy",
+    "name":"Helper",
+    "path":"folders/Sprites/Helper.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

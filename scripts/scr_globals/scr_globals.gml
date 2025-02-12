@@ -22,6 +22,8 @@ global.antivirus = false;
 global.cleaner = false;
 
 
+global.paint_uses = 10;
+
 //Popup
 global.popup = 0
 

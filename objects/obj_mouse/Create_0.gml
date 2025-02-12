@@ -14,7 +14,7 @@ window_set_cursor(cr_none)
 
 //quantidade de usos
 drag_uses = 10;
-paint_uses = 10;
+paint_uses = global.paint_uses
 eraser_uses = 2;
 folder_uses = 2;
 
@@ -122,7 +122,7 @@ state_machine = function()
 				{
 					instance_destroy(obj_icon1)
 					state = "none";
-					eraser_uses--;
+					
 				}
 			}
 			if (position_meeting(mouse_x,mouse_y,obj_icon2))
@@ -131,7 +131,7 @@ state_machine = function()
 				{
 					instance_destroy(obj_icon2)
 					state = "none";
-					eraser_uses--;
+					
 				}
 			}
 			if (position_meeting(mouse_x,mouse_y,obj_move))
@@ -140,7 +140,7 @@ state_machine = function()
 				{
 					instance_destroy(eraser_id)
 					state = "none";
-					eraser_uses--;
+					
 				}
 			}
 			
@@ -159,7 +159,7 @@ state_machine = function()
 				{
 					
 					//se eu ainda tiver usos
-					if (paint_uses > 0)
+					if (global.paint_uses > 0)
 					{
 						var _grid = 16
 						//Alinha na grid
@@ -167,7 +167,7 @@ state_machine = function()
 						var _y = mouse_y div _grid * _grid
 						//cria cor e gasta uso
 						instance_create_layer(_x,_y,"icons",obj_color)
-						paint_uses--;
+						global.paint_uses--;
 					}
 				}
 			}

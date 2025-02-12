@@ -3,11 +3,11 @@ seg = 0; //se estou sendo segurado
 
 //-----Shot-----
 shot_timer = 0
-shot_wait = 120;
+shot_wait = 180;
 
 //------Status------
 life = 10;
-velocity = 0.5;
+velocity = 1;
 _id = id
 
 state = "moving"
@@ -45,7 +45,7 @@ state_machine = function()
 					{
 						//Atirando
 						var _shot = instance_create_layer(x,y,"virus",obj_virus_shot)
-						_shot.speed = 1;
+						_shot.speed = 2;
 						_shot.direction = _dir ; 
 						shot_timer = shot_wait;
 					}
