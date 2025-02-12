@@ -261,7 +261,7 @@ if (global.antivirus)
 		{
 	
 			//alterna entre estados
-				if mouse_check_button_pressed(mb_left)
+				if (mouse_check_button_pressed(mb_left))
 				{
 					 if (obj_mouse.state != "antivirus")
 					 {

@@ -6,7 +6,7 @@
 state_machine();
 
 // se o mouse estiver no bug a fase reseta
-if position_meeting(mouse_x,mouse_y,obj_bug)
+if position_meeting(mouse_x,mouse_y,obj_bug_64)
 {
 	if (lose == false)
 	{
@@ -17,17 +17,6 @@ if position_meeting(mouse_x,mouse_y,obj_bug)
 
 #region mouse tomando dano
 // se ele esta colidindo com a mensagem de erro
-if position_meeting(mouse_x,mouse_y,obj_mensagem_erro)
-{
-	
-	//trocar sprite
-	cursor_sprite = spr_pmouse_dmg
-	
-	//tempotizador de dano
-	life_timer--;
-	
-
-}
 
 //se o timer
 if (life_timer <= 0)

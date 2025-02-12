@@ -32,5 +32,5 @@
     "path":"sprites/spr_stop/spr_stop.yy",
   },
   "spriteMaskId":null,
-  "visible":true,
+  "visible":false,
 }

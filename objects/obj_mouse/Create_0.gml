@@ -14,7 +14,7 @@ window_set_cursor(cr_none)
 
 //quantidade de usos
 drag_uses = 10;
-paint_uses = 1;
+paint_uses = 10;
 eraser_uses = 2;
 folder_uses = 2;
 

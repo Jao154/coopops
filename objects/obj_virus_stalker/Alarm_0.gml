@@ -1,2 +1,2 @@
 //voltando a me mover
-velocity = 0.2
+velocity = 0.5;

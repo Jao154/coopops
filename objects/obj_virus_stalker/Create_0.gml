@@ -2,7 +2,7 @@ seg = 0; //se estou sendo segurado
 
 //status
 life = 10;
-velocity = 0.2;
+velocity = 0.5;
 
 //identidade
 _id = id

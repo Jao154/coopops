@@ -1,13 +1,15 @@
 {
   "$GMObject":"",
-  "%Name":"obj_mensagem_erro",
-  "eventList":[],
+  "%Name":"obj_bug_64",
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":{"name":"obj_helper","path":"objects/obj_helper/obj_helper.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
-  "name":"obj_mensagem_erro",
+  "name":"obj_bug_64",
   "overriddenProperties":[],
   "parent":{
-    "name":"Colisores",
-    "path":"folders/Objetos/Colisores.yy",
+    "name":"icones",
+    "path":"folders/Objetos/icones.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -28,8 +30,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_mensagem_erro",
-    "path":"sprites/spr_mensagem_erro/spr_mensagem_erro.yy",
+    "name":"Sprite60",
+    "path":"sprites/Sprite60/Sprite60.yy",
   },
   "spriteMaskId":null,
   "visible":true,

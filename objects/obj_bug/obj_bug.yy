@@ -3,13 +3,14 @@
   "%Name":"obj_bug",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":{"name":"obj_helper","path":"objects/obj_helper/obj_helper.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":10,"eventType":6,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
   "name":"obj_bug",
   "overriddenProperties":[],
   "parent":{
-    "name":"icones",
-    "path":"folders/Objetos/icones.yy",
+    "name":"Colisores",
+    "path":"folders/Objetos/Colisores.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -30,9 +31,9 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_virus_shot",
-    "path":"sprites/spr_virus_shot/spr_virus_shot.yy",
+    "name":"spr_mensagem_erro",
+    "path":"sprites/spr_mensagem_erro/spr_mensagem_erro.yy",
   },
   "spriteMaskId":null,
-  "visible":true,
+  "visible":false,
 }

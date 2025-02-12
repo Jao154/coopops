@@ -1,4 +1,4 @@
-velocity = 0.5;
+
 begin_move = false;
 state = "waiting"
 state_machine = function()

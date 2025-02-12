@@ -17,8 +17,8 @@ global.helper_life_max = 3//Vida máxima
 //Icones coletados
 global.paint = false;
 global.lixeira = false;
-global.folder = true;
-global.antivirus = true;
+global.folder = false;
+global.antivirus = false;
 global.cleaner = false;
 
 

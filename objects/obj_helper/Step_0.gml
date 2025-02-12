@@ -35,7 +35,7 @@ else
 #region teclas para ativar programas do helper
 
 //se apertei,aterno meu estado
-if keyboard_check_pressed(ord("1"))
+if keyboard_check_pressed(ord("3"))
 {
 	if (obj_mouse.folder_uses > 0)
 	{
@@ -57,7 +57,7 @@ if keyboard_check_pressed(ord("1"))
 }
 
 //se o tempo do cleaner ja recarregou eu posso usa-lo
-if keyboard_check_pressed(ord("2"))
+if keyboard_check_pressed(ord("5"))
 {
 	if (cleaner_timer <= 0)
 	{
