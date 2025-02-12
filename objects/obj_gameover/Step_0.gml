@@ -25,6 +25,11 @@ if (obj_helper.y > room_height + 16)
 	room_restart();
 }
 
+//Mouse em cima do bug
+if position_meeting(mouse_x,mouse_y,obj_bug)
+{
+	lose = true	
+}
 
 //------------TEMPORIZADOR-----------------
 //Se perdi por falta de arraste

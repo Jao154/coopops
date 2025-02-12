@@ -17,6 +17,7 @@ state_machine = function()
 		{
 			case "moving":
 			{
+				sprite_index = spr_virus_corrupter
 					//se eu estou longe, eu me aproximo				
 					if (obj_helper.state != "folder")
 					{
@@ -30,11 +31,14 @@ state_machine = function()
 			case "shooting":
 			{
 				speed = 0;
+				sprite_index = spr_corruptor_attack
+				image_speed = (shot_timer / 60)
 				
 				//Tempo de espera acabou
 				if (shot_timer <= 0)
 				{
-					
+					image_index = 0
+
 					//Mirando
 					var _dir = point_direction(x,y,obj_helper.x,obj_helper.y)
 					if (obj_helper.state != "folder")

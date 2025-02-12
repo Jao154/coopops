@@ -9,3 +9,6 @@ if state = "paint" && paint_uses > 0
 		
 		draw_sprite_ext(spr_color, 0, _x, _y, 1, 1, 0, c_white, .5)
 }
+
+//draw_text(mouse_x, mouse_y, state)
+//draw_text(mouse_x, mouse_y - 20, lose)

@@ -2,6 +2,13 @@
 mask_index = spr_helper_idle
 state_machine();
 
+//Fica parado quando está em uma transição
+if instance_exists(obj_transicao)
+{
+	hspd = 0
+	vspd = 0
+}
+
 if (timer >= 0)
 {
 	timer--;

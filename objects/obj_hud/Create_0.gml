@@ -5,4 +5,4 @@ gui_h = display_get_gui_height()
 
 ///Menu do som
 sound = 0
-volume = 0 //Volume do som
+volume = 1 //Volume do som

@@ -28,7 +28,12 @@ lose = false;
 life_timer = 90;
 life = 3;
 
+bug_timer_s = 5
+bug_timer = bug_timer_s
+
 #region state machine
+
+
 
 state = "none"
 state_machine = function()
