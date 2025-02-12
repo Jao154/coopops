@@ -12,7 +12,7 @@ function player_take_damage() //Dano no player
 {
 	with (obj_helper)
 		{
-			if (timer <= 0)
+			if (timer <= 0 and obj_helper.state != "folder")
 		{
 			screen_shake(30,20)
 			global.helper_life--;

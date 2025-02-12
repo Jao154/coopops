@@ -9,9 +9,11 @@ if room != rm_menu
 //Segue o alvo da camera só se ele existir
 if instance_exists(view_target)
 {
+		
 		//Segue o jogador o colocando no meio da tela
 		var _x1 = view_target.x - global.view_widht/2
 		var _y1 = view_target.y - global.view_height/2
+		
 		
 		_x1 += random_range(-shake_length, shake_length)
 		_y1 += random_range(-shake_length, shake_length)
@@ -29,5 +31,7 @@ if instance_exists(view_target)
 		
 		//Aplicando na camera
 		camera_set_view_pos(view_camera[0], _xx, _yy)
+		
+		
 		
 }

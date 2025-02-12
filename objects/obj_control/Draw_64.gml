@@ -213,7 +213,9 @@ if (global.folder)
 						if (obj_helper.state != "folder")
 						{
 							obj_mouse.folder_uses--;
+							
 							obj_helper.state = "folder" 
+				
 						}
 						else
 						{
