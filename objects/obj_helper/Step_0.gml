@@ -1,7 +1,7 @@
 /// @description Controle
 mask_index = spr_helper_idle
 state_machine();
-
+folder_timer--;
 show_debug_overlay(true)
 //Fica parado quando está em uma transição
 if instance_exists(obj_transicao)
@@ -91,11 +91,11 @@ if (global.folder = true)
 {
 	if keyboard_check_pressed(ord("3"))
 	{
-		if (obj_mouse.folder_uses > 0)
+		if (folder_timer  <= 0)
 		{
 			if state != "folder"
 			{
-				obj_mouse.folder_uses--;
+				folder_timer = folder_wait;
 				state = "folder"
 			}
 			else
@@ -109,6 +109,7 @@ if (global.folder = true)
 			state = "idle"
 		}
 	}
+	
 }
 //se o tempo do cleaner ja recarregou eu posso usa-lo
 if (global.cleaner)

@@ -3,6 +3,9 @@ vspd = 0		//Velocidade Vertical
 dir    =  0		//Direção que estou olhando
 grav = .2			//Gravidade
 
+folder_timer = 0;
+folder_wait = 300;
+
 timer_die = 60
 
 timer = 0;

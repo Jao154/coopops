@@ -1,4 +1,9 @@
 seg = 0; //se estou sendo segurado
+origin_x = x
+origin_y = y
+
+mouse_in = false;
+helper_in = false;
 
 
 //status
@@ -31,25 +36,32 @@ state_machine = function()
 			path_begin = false; //O path ja começou
 			
 			//Perseguindo o alvo mais próximo
-			if (distance_to_object(obj_helper)  > distance_to_point(mouse_x,mouse_y) )
+			if (helper_in)
 			{
-				if (obj_mouse.state != "antivirus")
+				if (mouse_in == false)
 				{
-					move_towards_point(mouse_x,mouse_y,velocity);
-				}
-			}
-			else
-			{
-				if (obj_helper.state != "folder")
-				{
-					move_towards_point(obj_helper.x,obj_helper.y,velocity);
+					move_towards_point(obj_helper.x,obj_helper.y,velocity)
 				}
 				else
 				{
-					if (obj_mouse.state != "antivirus")
+					if (distance_to_object(obj_helper) < point_distance(x,y,mouse_x,mouse_y))
 					{
-						move_towards_point(mouse_x,mouse_y,velocity);
-					}				
+						move_towards_point(obj_helper.x,obj_helper.y,velocity)
+					}
+				}
+			}
+			if (mouse_in)
+			{
+				if (helper_in == false)
+				{
+					move_towards_point(mouse_x,mouse_y,velocity)
+				}
+				else
+				{
+					if (distance_to_object(obj_helper) > point_distance(x,y,mouse_x,mouse_y))
+					{
+						move_towards_point(mouse_x,mouse_y,velocity)
+					}
 				}
 			}
 			
@@ -57,7 +69,7 @@ state_machine = function()
 		break
 		case "returning": //Retornado ao posto(obj_guard)
 		{
-			move_towards_point(obj_guard.x,obj_guard.y,velocity );
+			move_towards_point(origin_x,origin_y,velocity );
 		}
 		break
 		case "die":

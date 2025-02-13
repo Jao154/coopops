@@ -2,6 +2,11 @@
 //Checando se já tem um objeto embaixo desse
  if !instance_exists(obj_zip) instance_destroy(id)
  
+ if (seg = 0)
+ {
+	image_alpha = 1; 
+ }
+ 
 var _ocupado = place_meeting(x,y,obj_solid) or place_meeting(x,y,obj_helper)
 
 //Se o mouse eata no estado de arraste

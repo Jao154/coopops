@@ -235,7 +235,7 @@ if (global.folder)
 		}
 
 		//Reseta a cor quando eu paro de usar a pasta
-		if (obj_helper.state = "folder")
+		if (obj_helper.folder_timer > 0)
 		{		
 			_2_color = c_red
 		}
@@ -247,7 +247,6 @@ if (global.folder)
 	
 		//Desenha o sprite da pasta
 		draw_sprite_ext(_sprite, 3, 350, _gui_h - 45, 5, 5, 0, _2_color, 1)
-		draw_text_transformed(375, _gui_h - 25, string(obj_mouse.folder_uses), _txt_scale, _txt_scale, 0)
 		draw_text_transformed(344,_gui_h - 50, string(3), _txt_scale, _txt_scale, 0)
 }
 

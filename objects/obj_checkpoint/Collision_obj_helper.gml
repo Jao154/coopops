@@ -1,5 +1,7 @@
 //se o sprite ta verde, não salve.
 if (image_index == 5) exit
+global.helper_life = global.helper_life_max
+global.mouse_life = global.mouse_life_max
 
 //animando
 image_speed = 6;
@@ -39,6 +41,7 @@ obj_mouse.drag_uses = 10;
 	ini_write_real("move","x",obj_move.x)
 	ini_write_real("move","y",obj_move.y)
  }
+
  
  if (instance_exists(obj_key))
  {

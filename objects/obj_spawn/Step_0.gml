@@ -13,3 +13,15 @@ if (awaker)
 		instance_create_layer(_x,_y,"virus",virus)
 	}
 }
+
+if (room == rm_antivirus)
+{
+	if place_empty(x,y,obj_key)
+	{
+		if (begin_spawn = false)
+		{
+			begin_spawn = true;
+			instance_create_layer(_x,_y,"virus",virus)
+		}
+	}
+}

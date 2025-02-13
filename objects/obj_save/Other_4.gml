@@ -33,13 +33,18 @@ if (file_exists("checkpoint.ini")) //se tocar pela primeira vez
 	{
 		obj_key.x = ini_read_real("key","x",x);
 		obj_key.y = ini_read_real("key","y",y);
+		
 	}
+	
+	if (global.paint)
+	{
+		global.paint_uses = ini_read_real("paint","uses",global.paint_uses)
+	}
+	
+	
 	ini_close();
 }
-else
-{
-	global.paint_uses = 10;
-}
+
 }
 //-------SAVE DOS PROGRAMAS
 //Se coletei algum programa, le o programa coletado

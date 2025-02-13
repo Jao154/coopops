@@ -88,8 +88,9 @@
     {"id":{"name":"obj_virus_stalker","path":"objects/obj_virus_stalker/obj_virus_stalker.yy",},},
     {"id":{"name":"obj_virus_troia","path":"objects/obj_virus_troia/obj_virus_troia.yy",},},
     {"id":{"name":"obj_zip","path":"objects/obj_zip/obj_zip.yy",},},
-    {"id":{"name":"path_reto_curto","path":"paths/path_reto_curto/path_reto_curto.yy",},},
+    {"id":{"name":"Path1","path":"paths/Path1/Path1.yy",},},
     {"id":{"name":"rm_antivirus","path":"rooms/rm_antivirus/rm_antivirus.yy",},},
+    {"id":{"name":"rm_cleaner","path":"rooms/rm_cleaner/rm_cleaner.yy",},},
     {"id":{"name":"rm_eraser","path":"rooms/rm_eraser/rm_eraser.yy",},},
     {"id":{"name":"rm_folder","path":"rooms/rm_folder/rm_folder.yy",},},
     {"id":{"name":"rm_menu","path":"rooms/rm_menu/rm_menu.yy",},},
@@ -185,6 +186,7 @@
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
+    {"roomId":{"name":"rm_cleaner","path":"rooms/rm_cleaner/rm_cleaner.yy",},},
     {"roomId":{"name":"rm_antivirus","path":"rooms/rm_antivirus/rm_antivirus.yy",},},
     {"roomId":{"name":"rm_menu","path":"rooms/rm_menu/rm_menu.yy",},},
     {"roomId":{"name":"rm_eraser","path":"rooms/rm_eraser/rm_eraser.yy",},},
