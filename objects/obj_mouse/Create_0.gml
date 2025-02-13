@@ -55,8 +55,7 @@ state_machine = function()
 			//se estou colidindo com o icone
 			if position_meeting(mouse_x, mouse_y, obj_icon1)
 			or position_meeting(mouse_x,mouse_y,obj_icon2)
-			or (obj_helper.state == "folder" 
-			and position_meeting(mouse_x,mouse_y,obj_helper))
+			or position_meeting(mouse_x,mouse_y,obj_key)
 				{
 					//alternado para arraste
 					if (mouse_check_button_pressed(mb_left))

@@ -40,4 +40,10 @@ obj_mouse.drag_uses = 10;
 	ini_write_real("move","y",obj_move.y)
  }
  
+ if (instance_exists(obj_key))
+ {
+	ini_write_real("key","x",obj_key.x)
+	ini_write_real("key","y",obj_key.y)
+ }
+ 
  ini_close();

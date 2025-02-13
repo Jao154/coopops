@@ -29,6 +29,11 @@ if (file_exists("checkpoint.ini")) //se tocar pela primeira vez
 		obj_move.x = ini_read_real("move","x",x);
 		obj_move.y = ini_read_real("move","y",y);
 	}
+	if instance_exists(obj_key)
+	{
+		obj_key.x = ini_read_real("key","x",x);
+		obj_key.y = ini_read_real("key","y",y);
+	}
 	ini_close();
 }
 else

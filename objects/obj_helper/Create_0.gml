@@ -17,6 +17,12 @@ alpha = 1 //Transparência
 last_x = x
 last_y = y
 
+
+if !file_exists("checkpoint.ini")
+{
+	global.paint_uses = 10;
+}
+
 //Tamanho da sprite
 tam = sprite_width
 global.helper_life = global.helper_life_max
@@ -72,10 +78,18 @@ state_machine = function()
 			_move_solid = place_meeting(x, y + 1, obj_move)	
 		}
 	}
+	var _key_solid = 0
+	if instance_exists(obj_key)
+	{
+		if obj_key.seg = 0
+		{
+			_key_solid = place_meeting(x, y + 1, obj_key)	
+		}
+	}
 	
 	
 	
-	var _ground = place_meeting(x, y + 1, obj_solid) or _icon_solid1 or _icon_solid2 or _move_solid
+	var _ground = place_meeting(x, y + 1, obj_solid) or _icon_solid1 or _icon_solid2 or _move_solid or _key_solid
 	
 	// armazenando teclas
 	var _left, _right, _up
