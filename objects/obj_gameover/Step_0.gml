@@ -26,13 +26,15 @@ if (obj_helper.y > room_height + 16)
 }
 
 //Mouse em cima do bug
-if position_meeting(mouse_x,mouse_y,obj_bug)
+if position_meeting(mouse_x,mouse_y,obj_bug) or obj_mouse.drag_uses <= 0
 {
+	
 	lose = true	
 }
 
 //------------TEMPORIZADOR-----------------
 //Se perdi por falta de arraste
+
 if (lose)
 {
 	//Se ainda tenho tempo

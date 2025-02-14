@@ -29,10 +29,10 @@ if (file_exists("checkpoint.ini")) //se tocar pela primeira vez
 		obj_move.x = ini_read_real("move","x",x);
 		obj_move.y = ini_read_real("move","y",y);
 	}
-	if instance_exists(obj_key)
+	if instance_exists(obj_helper)
 	{
-		obj_key.x = ini_read_real("key","x",x);
-		obj_key.y = ini_read_real("key","y",y);
+		obj_helper.key = ini_read_real("key","bool",obj_helper.key);
+		
 		
 	}
 	
@@ -52,10 +52,6 @@ if file_exists("programas.ini")
 {
 	
 	ini_open("programas.ini")
-	if (global.paint)
-	{
-		global.paint_uses = ini_read_real("paint","uses",10);
-	}
 	
 	if (ini_key_exists("paint","bool"))
 	{

@@ -25,3 +25,11 @@ if (room == rm_antivirus)
 		}
 	}
 }
+if (room == rm_cleaner)
+{
+	if (obj_helper.y < 448 and begin_spawn == false)
+	{
+		begin_spawn = true;
+		alarm[1] = 1;
+	}
+}

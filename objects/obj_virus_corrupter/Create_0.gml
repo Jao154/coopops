@@ -6,7 +6,7 @@ shot_timer = 0
 shot_wait = 180;
 
 //------Status------
-life = 10;
+life = 5;
 velocity = .5;
 _id = id
 
@@ -58,6 +58,7 @@ state_machine = function()
 			case "die":
 			{
 				sprite_index = spr_corruptor_die
+				image_speed = 4;			
 			}
 			break
 		}

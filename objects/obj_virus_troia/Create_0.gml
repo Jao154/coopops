@@ -2,7 +2,7 @@ seg = 0; //se estou sendo segurado
 radius = 50; //alcance
 //status
 life = 10;
-velocity = 0.2;
+velocity = 0.5;
 
 //id para o antivirusd
 _id = id
@@ -17,7 +17,7 @@ state_machine = function()
 			sprite_index = spr_troia_idle
 			if (collision_circle(x,y,radius,obj_helper,false,false)) or point_in_circle(mouse_x,mouse_y,x,y,radius)
 			{
-				state = "chase"
+				id.state = "chase"
 			}
 			
 		}

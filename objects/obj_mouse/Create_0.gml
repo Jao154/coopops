@@ -14,7 +14,7 @@ window_set_cursor(cr_none)
 
 //quantidade de usos
 drag_uses = 10;
-paint_uses = global.paint_uses
+
 eraser_uses = 2;
 folder_uses = 2;
 
@@ -42,8 +42,14 @@ state_machine = function()
 	{
 		case "none":
 		{
-			cursor_sprite = spr_pmouse
-			
+			if position_meeting(mouse_x,mouse_y,obj_bug)
+			{
+				cursor_sprite = spr_pmouse_dmg
+			}
+			else
+			{
+				cursor_sprite = spr_pmouse;	
+			}
 			enemy_id = noone;
 			eraser_id = noone;
 			
@@ -55,7 +61,7 @@ state_machine = function()
 			//se estou colidindo com o icone
 			if position_meeting(mouse_x, mouse_y, obj_icon1)
 			or position_meeting(mouse_x,mouse_y,obj_icon2)
-			or position_meeting(mouse_x,mouse_y,obj_key)
+			
 				{
 					//alternado para arraste
 					if (mouse_check_button_pressed(mb_left))
@@ -81,8 +87,14 @@ state_machine = function()
 		break
 		case "drag":
 		{
-			cursor_sprite = spr_pmouse_drag;
-			
+			if position_meeting(mouse_x,mouse_y,obj_bug)
+			{
+				cursor_sprite = spr_pmouse_drag_dmg
+			}
+			else
+			{
+				cursor_sprite = spr_pmouse_drag;	
+			}
 			//se soltei o botão do mouse
 			if (mouse_check_button_released(mb_left))
 			{
@@ -112,7 +124,14 @@ state_machine = function()
 		break
 		case "eraser":
 		{
-			cursor_sprite = spr_mouse_lixeira;
+			if position_meeting(mouse_x,mouse_y,obj_bug)
+			{
+				cursor_sprite = spr_mouse_lixeira_dmg
+			}
+			else
+			{
+				cursor_sprite = spr_mouse_lixeira;	
+			}
 			
 			
 			if (position_meeting(mouse_x,mouse_y,obj_icon1))
@@ -147,7 +166,14 @@ state_machine = function()
 		break
 		case "paint":
 		{
-			cursor_sprite = spr_mouse_paint
+			if position_meeting(mouse_x,mouse_y,obj_bug)
+			{
+				cursor_sprite = spr_mouse_paint_dmg
+			}
+			else
+			{
+				cursor_sprite = spr_mouse_paint;	
+			}
 			
 			//se estiver no estado paint e clicar
 			if mouse_check_button_pressed(mb_left)
@@ -174,25 +200,16 @@ state_machine = function()
 		break
 		case "antivirus":
 		{
-			cursor_sprite = spr_mouse_antivirus
-			
-			//colisão
-			if position_meeting(mouse_x,mouse_y,obj_virus_stalker)
+			if position_meeting(mouse_x,mouse_y,obj_bug)
 			{
-				
-				if mouse_check_button_pressed(mb_left)
-				{
-					
-					enemy_id.life--; //reduz a vida
-					enemy_id.velocity = 0; // faz ele parar
-					enemy_id.alarm[0] = 10; // tempo para ele voltar a andar
-					screen_shake(15,10)
-					//efeito mola
-					enemy_id.image_xscale = lerp(image_xscale,2,0.5)
-					enemy_id.image_yscale = lerp(image_yscale,0.2,0.5)
-					
-				}
+				cursor_sprite = spr_pmouse_dmg
 			}
+			else
+			{
+				cursor_sprite = spr_mouse_antivirus;	
+			}
+			
+			
 		}
 		break
 		case "mouse_dmg":

@@ -1,5 +1,5 @@
 state_machine();
-drag("following")
+if (state != "die") drag("following")
 
 //mostrando a quem deve dar dano
 antivirus_id();

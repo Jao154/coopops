@@ -57,20 +57,7 @@ if instance_exists(obj_move)
 			}
 	}
 }
-if instance_exists(obj_key)
-{
-	if obj_key.seg = 0 
-	{
-			if place_meeting(x + hspd, y, obj_key)
-			{
-					while(!place_meeting(x + sign(hspd), y, obj_key))
-					{
-						x = x + sign(hspd)
-					}
-				hspd = 0
-			}
-	}
-}
+
 //Movendo o X
 x += hspd
 
@@ -113,19 +100,6 @@ if instance_exists(obj_move)
 			if place_meeting(x, y + vspd, obj_move)
 			{
 					while(!place_meeting(x, y + sign(vspd), obj_move))
-					{
-						y = y + sign(vspd)
-					}
-				vspd = 0
-			}
-	}
-}
-if instance_exists(obj_key)
-{
-	if obj_key.seg = 0 {
-			if place_meeting(x, y + vspd, obj_key)
-			{
-					while(!place_meeting(x, y + sign(vspd), obj_key))
 					{
 						y = y + sign(vspd)
 					}

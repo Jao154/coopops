@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":375.4841,
+  "duration":0.0,
   "name":"snd_Sincerely",
   "parent":{
     "name":"Trilha sonora",

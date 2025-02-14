@@ -1,0 +1,1 @@
+global.virus_count--;

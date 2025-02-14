@@ -1,5 +1,5 @@
 //status
-life = 10;
+life = 3;
 velocity = 0.5;
 
 //identidade

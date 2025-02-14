@@ -7,7 +7,7 @@ helper_in = false;
 
 
 //status
-life = 10;
+life = 5;
 velocity = 1;
 _id = id //para o antivirus
 

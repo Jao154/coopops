@@ -1,6 +1,6 @@
 /// @description
 //Desenha o paint onde o jogador pode pintar
-if state = "paint" && paint_uses > 0
+if state = "paint" && global.paint_uses > 0
 {
 		var _grid = 16
 		//Alinha na grid

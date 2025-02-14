@@ -1,8 +1,41 @@
 /// @description Controle
 mask_index = spr_helper_idle
 state_machine();
-folder_timer--;
-show_debug_overlay(true)
+
+ 
+if (state != "folder")
+{
+	//Se ainda tenho tempo
+	if (folder_cooldown > 0)
+		{
+			//Meu tempo diminui um segundo
+			folder_cooldown = folder_cooldown - delta_time/1000000
+		}
+		else 
+		{
+			//Se não tenho tempo
+			folder_timer = 0
+		}
+}
+ 
+if (global.cleaner_buff == false)
+{
+	//Se ainda tenho tempo
+	if (cleaner_cooldown > 0)
+		{
+			//Meu tempo diminui um segundo
+			cleaner_cooldown = cleaner_cooldown - delta_time/1000000
+		}
+		else 
+		{
+			//Se não tenho tempo
+			cleaner_timer = 0
+		}
+}
+
+
+
+
 //Fica parado quando está em uma transição
 if instance_exists(obj_transicao)
 {
@@ -14,13 +47,6 @@ if (timer >= 0)
 {
 	timer--;
 }
-
-#region cleaner control
-if (cleaner_timer >= -10)
-{
-	cleaner_timer--;
-}
-
 
 if (global.cleaner_buff)
 {
@@ -37,8 +63,7 @@ else
 	max_hspd = hspd_normal;
 	max_vspd = vspd_normal;
 }
-
-#endregion 
+ 
 
 #region teclas para ativar programas do helper
 
@@ -81,7 +106,7 @@ if (global.antivirus)
 		}
 		else
 		{
-			obj_mouse.state ="antivirus";
+			obj_mouse.state ="none";
 		}
 	}
 }
@@ -91,24 +116,19 @@ if (global.folder = true)
 {
 	if keyboard_check_pressed(ord("3"))
 	{
-		if (folder_timer  <= 0)
-		{
+		if (folder_cooldown <= 0)
 			if state != "folder"
 			{
-				folder_timer = folder_wait;
+				
 				state = "folder"
 			}
-			else
+			else if state = "folder"
 			{
+				folder_cooldown = 5;
 				state = "idle"
 			}
 		
-		}
-		else
-		{
-			state = "idle"
-		}
-	}
+	}		
 	
 }
 //se o tempo do cleaner ja recarregou eu posso usa-lo
@@ -116,22 +136,12 @@ if (global.cleaner)
 {
 	if keyboard_check_pressed(ord("5"))
 	{
-		if (cleaner_timer <= 0)
+		if (cleaner_cooldown <= 0)
 		{
 			global.cleaner_buff = true
-			obj_control.alarm[0] = 180;
-			cleaner_timer = cleaner_wait;
+			alarm[1] = 300;
 		}
 	}
 }
 
 #endregion
-/*
-if state != "folder"
-{
-	camera_set_view_speed(_cam,2,2)
-}
-else
-{
-		camera_set_view_speed(_cam,0,0);
-}

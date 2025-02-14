@@ -1,5 +1,6 @@
 /// @description Desenhando o Grid
-
+if (obj_mouse.state = "drag" or obj_mouse.state = "paint")
+{
 draw_set_alpha(.5)
 //Desenhando linhas
 for (var i = 0; i < lins; i++)
@@ -14,3 +15,4 @@ for (var j = 0; j < cols; j++)
 }
 
 draw_set_alpha(1)
+}

@@ -43,10 +43,10 @@ obj_mouse.drag_uses = 10;
  }
 
  
- if (instance_exists(obj_key))
+ if (instance_exists(obj_helper))
  {
-	ini_write_real("key","x",obj_key.x)
-	ini_write_real("key","y",obj_key.y)
+	ini_write_real("key","bool",obj_helper.key)
+	
  }
  
  ini_close();

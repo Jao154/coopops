@@ -1,0 +1,1 @@
+global.cleaner_buff = false;

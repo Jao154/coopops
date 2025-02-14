@@ -37,8 +37,9 @@ if (obj_mouse.state != "mouse_dmg")
 }
 if (seg = 1) && obj_mouse.item != noone
 {
-		cursor_sprite = spr_pmouse_drag
+		
 		//Se movendo na grid
+		obj_mouse.state = "drag" 
 		var _x = (mouse_x div tam) * tam
 		var _y = (mouse_y div tam) * tam
 	
@@ -49,6 +50,7 @@ if (seg = 1) && obj_mouse.item != noone
 if mouse_check_button_released(mb_left)
 	{
 		seg = 0
+		obj_mouse.state = "none"
 		obj_mouse.item = noone;
 		if (_ocupado)
 		{
