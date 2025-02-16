@@ -1,5 +1,16 @@
 
 //se estou aumentando
+if (final_level)
+{
+	if (global.cleaner)
+	{
+		image_alpha = 1;
+	}
+	else
+	{
+		image_alpha = 0;	
+	}
+}
 if (grow)
 {
 	image_xscale = lerp(image_xscale,1.2,0.02)

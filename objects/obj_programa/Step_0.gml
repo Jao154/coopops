@@ -1,4 +1,13 @@
-
+if (room == rm_boss)
+{
+	_y = 144
+	if !instance_exists(obj_boss)
+	{
+		if (y < _y and boss_kill == false)
+		y+= .5
+		if y > _y boss_kill = true
+	}
+}
 //se estou aumentando
 if (grow)
 {

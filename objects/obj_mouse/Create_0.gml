@@ -45,10 +45,12 @@ state_machine = function()
 			if position_meeting(mouse_x,mouse_y,obj_bug)
 			{
 				cursor_sprite = spr_pmouse_dmg
+				
 			}
 			else
 			{
 				cursor_sprite = spr_pmouse;	
+			
 			}
 			enemy_id = noone;
 			eraser_id = noone;

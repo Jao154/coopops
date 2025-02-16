@@ -33,7 +33,7 @@ for (var i = 0; i < global.mouse_life; i++)
 ///Usos do mouse ---
 if instance_exists(obj_mouse) 
 {
-		draw_sprite_ext(spr_pmouse, 0, gui_w - 40, 300, 4, 4, 0, c_white, 1)	
+		draw_sprite_ext(spr_mouse_16, 0, gui_w - 40, 300, 4, 4, 0, c_white, 1)	
 		draw_text_transformed(gui_w - 95, 290, string(obj_mouse.drag_uses), 4, 4, 0)
 }
 
@@ -80,7 +80,7 @@ if sound = 1
 	var _xx = (gui_w - 165)
 	var _slider = _xx + (_menu_w * volume)
 	draw_sprite_ext(spr_volume_slider, 0, _slider, gui_h -  80 - _spr_h, 4, 4, 0, c_white, 1)	
-	show_debug_message(_menu_w)
+	
 
 	//Alterando o valor
 	var _slider_x =  _xx + (_menu_w * volume)
@@ -105,4 +105,4 @@ if sound = 1
 	
 }
 
-show_debug_message(volume)
+

@@ -3,7 +3,7 @@ start_atack = false;
 count = 0;
 last_state = "idle"
 alarm[4] = 420;
-life = 100
+life = 1
 
 
 state = "idle"

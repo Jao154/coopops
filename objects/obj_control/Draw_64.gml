@@ -2,7 +2,7 @@
 
 
 //tava bugando
-//draw_text(20,60, "SEGURANDO :" + string(global.drag))
+
 
 //Pegando o mouse na tela
 var _mouse_x = device_mouse_x_to_gui(0)

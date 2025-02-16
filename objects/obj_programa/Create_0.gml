@@ -4,8 +4,7 @@ image_speed = 30
 //frame = icone
 //name = programa a ser consertado
 
-
-
+boss_kill = false
 //salvando meu y
 _y = y
 

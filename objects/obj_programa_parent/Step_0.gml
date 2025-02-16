@@ -20,6 +20,7 @@ if (obj_mouse.state != "mouse_dmg")
 				//se arrasta gasta um uso;
 				if (obj_mouse.drag == false)
 				{
+					
 					obj_mouse.drag = true;
 					obj_mouse.drag_uses--;
 				}
