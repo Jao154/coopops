@@ -1,6 +1,6 @@
 {
   "$GMSound":"",
-  "%Name":"snd_Sincerely",
+  "%Name":"sfx_hurt_stalker",
   "audioGroupId":{
     "name":"audiogroup_default",
     "path":"audiogroups/audiogroup_default",
@@ -9,17 +9,17 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":375.4841,
-  "name":"snd_Sincerely",
+  "duration":0.38585,
+  "name":"sfx_hurt_stalker",
   "parent":{
-    "name":"Trilha sonora",
-    "path":"folders/Sounds/Trilha sonora.yy",
+    "name":"Boss",
+    "path":"folders/Sounds/SFX/Boss.yy",
   },
   "preload":false,
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"snd_Sincerely.mp3",
+  "soundFile":"sfx_hurt_stalker.wav",
   "type":0,
   "volume":1.0,
 }

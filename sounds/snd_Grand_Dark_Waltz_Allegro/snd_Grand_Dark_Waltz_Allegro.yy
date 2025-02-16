@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":0.0,
+  "duration":385.35834,
   "name":"snd_Grand_Dark_Waltz_Allegro",
   "parent":{
     "name":"Trilha sonora",

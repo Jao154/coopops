@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":0.0,
+  "duration":388.3102,
   "name":"snd_A_Very_Brady_Special",
   "parent":{
     "name":"Trilha sonora",

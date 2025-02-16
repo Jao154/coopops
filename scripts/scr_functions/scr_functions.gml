@@ -15,6 +15,7 @@ function player_take_damage() //Dano no player
 			if (timer <= 0 and obj_helper.state != "folder")
 		{
 			screen_shake(30,20)
+			audio_play_sound(sfx_hurt, 0, 0)
 			global.helper_life--;
 			timer = dmg_timer
 		}

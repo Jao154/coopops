@@ -12,6 +12,14 @@ if !instance_exists(obj_transicao)
 		}
 		_trans.dest = rm_boss 
 	}
+	else if (room == rm_boss)
+	{
+		if file_exists("checkpoint.ini")
+		{
+			file_delete("checkpoint.ini")
+		}
+		_trans.dest = rm_end
+	}
 	else
 	{
 		_trans.dest = rm_menu

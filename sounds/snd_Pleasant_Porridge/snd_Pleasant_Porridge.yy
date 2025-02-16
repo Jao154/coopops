@@ -9,7 +9,7 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":0.0,
+  "duration":171.49385,
   "name":"snd_Pleasant_Porridge",
   "parent":{
     "name":"Trilha sonora",

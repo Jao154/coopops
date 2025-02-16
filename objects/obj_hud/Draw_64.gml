@@ -33,8 +33,8 @@ for (var i = 0; i < global.mouse_life; i++)
 ///Usos do mouse ---
 if instance_exists(obj_mouse) 
 {
-		draw_sprite_ext(spr_mouse_16, 0, gui_w - 40, 300, 4, 4, 0, c_white, 1)	
-		draw_text_transformed(gui_w - 95, 290, string(obj_mouse.drag_uses), 4, 4, 0)
+		draw_sprite_ext(spr_mouse_16, 0, gui_w - 60, 270, 4, 4, 0, c_white, 1)	
+		draw_text_transformed(gui_w - 80, 280, string(obj_mouse.drag_uses), 4, 4, 0)
 }
 
 //Nome do level
@@ -57,9 +57,9 @@ var _spr_h = sprite_get_height(spr_sound)
 var _mouse_x = device_mouse_x_to_gui(0)
 var _mouse_y = device_mouse_y_to_gui(0)
 
-draw_sprite_ext(spr_sound, 0, gui_w - 140,  gui_h - 40, 4, 4, 0, c_white, 1)
+draw_sprite_ext(spr_sound, 0, gui_w - 170,  gui_h - 40, 4, 4, 0, c_white, 1)
 //draw_rectangle((gui_w - 140) - _sprite_w - 8,  (gui_h - 40) - _spr_h - 8, (gui_w - 140) + _sprite_w + 8,(gui_h - 40) + _spr_h + 8, false)
-var _icon = point_in_rectangle(_mouse_x, _mouse_y, (gui_w - 140) - _sprite_w - 8,  (gui_h - 40) - _spr_h - 8, (gui_w - 140) + _sprite_w + 8,(gui_h - 40) + _spr_h + 8)
+var _icon = point_in_rectangle(_mouse_x, _mouse_y, (gui_w - 170) - _sprite_w - 8,  (gui_h - 40) - _spr_h - 8, (gui_w - 170) + _sprite_w + 8,(gui_h - 40) + _spr_h + 8)
 
 //Clicando no icone do som
 if (_icon)
