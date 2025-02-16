@@ -32,7 +32,7 @@ last_y = y
 tam = sprite_width
 global.helper_life = global.helper_life_max
 
-
+global.cleaner_buff = false;
 //cleaner
 
 cleaner_begin = false; //inicio das particulas
@@ -82,10 +82,7 @@ state_machine = function()
 			_move_solid = place_meeting(x, y + 1, obj_move)	
 		}
 	}
-	
-	
-	
-	
+
 	var _ground = place_meeting(x, y + 1, obj_solid) or _icon_solid1 or _icon_solid2 or _move_solid
 	
 	// armazenando teclas

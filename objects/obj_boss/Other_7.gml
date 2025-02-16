@@ -1,0 +1,1 @@
+if sprite_index == spr_boss_die instance_destroy(id)

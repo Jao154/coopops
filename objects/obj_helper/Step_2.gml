@@ -71,6 +71,7 @@ if place_meeting(x, y + vspd, obj_solid)
 	vspd = 0
 }
 
+
 //Colisão vertical com os icones que o mouse pode pegar
 if (instance_exists(obj_icon1) and obj_icon1.seg = 0  )
 {
@@ -107,6 +108,8 @@ if instance_exists(obj_move)
 			}
 	}
 }
+
+
 
 
 //Movendo o Y

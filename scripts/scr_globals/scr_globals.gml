@@ -15,11 +15,11 @@ global.course_name = noone;
 global.helper_life = 3 //Quantas vidas
 global.helper_life_max = 3//Vida máxima
 //Icones coletados
-global.paint = false;
+global.paint = true;
 global.lixeira = false;
 global.folder = false;
-global.antivirus = false;
-global.cleaner = false;
+global.antivirus = true;
+global.cleaner = true;
 
 global.virus_count = 0;
 

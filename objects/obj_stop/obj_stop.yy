@@ -6,8 +6,8 @@
   "name":"obj_stop",
   "overriddenProperties":[],
   "parent":{
-    "name":"Colisores",
-    "path":"folders/Objetos/Colisores.yy",
+    "name":"Controladores",
+    "path":"folders/Objetos/Controladores.yy",
   },
   "parentObjectId":null,
   "persistent":false,
